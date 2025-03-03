@@ -1,0 +1,935 @@
+
+<html lang="pt-BR">
+<head>
+    <title>David Morato</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .lyrics-container {
+            max-height: 500px; /* Defina uma altura máxima adequada */ 
+            
+        }
+
+        .lyrics {
+            position: relative;
+            white-space: pre-line;
+            font-size: 20px;
+            line-height: 1.2;
+            width: 100%; /* Garante que ocupe toda a largura do container */
+        }
+
+        .ipa {
+            color: orange;
+            font-size: 20px;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px black;
+            display: block;
+        }
+        .skills {
+            color: orange;
+            font-size: 20px;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px black;
+        }
+    </style>
+</head>
+<body>
+    <section>
+      <div class="icon-container">
+        <div class="icon-box about dock-icon" data-modal="about">
+          <i class="fa fa-user-o"></i>
+        </div>
+        <div class="icon-box projects dock-icon" data-modal="projects">
+          <i class="fa fa-superpowers"></i>
+        </div>
+        <div class="icon-box services dock-icon" data-modal="services">
+           <!--  <ion-icon name="construct-outline"></ion-icon> -->
+          <i class="fa fa-music"></i>
+        </div>
+        <div class="icon-box contact dock-icon" data-modal="contact">
+          <i class="fa fa-envelope-open"></i>
+        </div>
+        <!--<div class="icon-box pagtos dock-icon" data-modal="pagtos">
+          <i class="fa fa-question"></i>
+        </div>-->
+      </div>
+    </section>
+
+    <div class="popup" id="about">
+      <div class="popup-container">
+        <div class="popup-header">
+          <div class="button-container">
+            <button class="close-btn circle-btn red">
+              <i class="fa fa-times"></i>
+            </button>
+            <button class="close-btn circle-btn yellow">
+              <i class="fa fa-window-minimize"></i>
+            </button>
+            <button class="maximize-btn circle-btn green">
+              <i class="fa fa-window-maximize"></i>
+            </button>
+          </div>
+        </div>
+        <div class="popup-body about-container">
+          <div class="img-frame">
+            <img
+              src="david.jpg"
+              alt="David">
+          </div>
+          <div class="hero-content">
+            <h1>My Music Ipa</h1>
+            <p style="text-align: justify;">
+              Olá! Me chamo David, estou estudando inglês e música por conta própria. 🎶✨ Para ajudar no meu desenvolvimento, criei este espaço onde utilizo uma espécie de IPA personalizado – uma forma adaptada de transcrição fonética que faz mais sentido para mim.
+              Meu objetivo é melhorar a pronúncia e compreensão do inglês de um jeito mais intuitivo, transformando músicas e frases em uma versão escrita que eu possa ler e falar com mais naturalidade.
+              Se você também está estudando inglês e curtiu essa abordagem, fique à vontade para acompanhar! 🚀🔤🎤
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="popup" id="projects">
+      <div class="popup-container">
+        <div class="popup-header">
+          <div class="button-container">
+            <button class="close-btn circle-btn red">
+              <i class="fa fa-times"></i>
+            </button>
+            <button class="close-btn circle-btn yellow">
+              <i class="fa fa-window-minimize"></i>
+            </button>
+            <button class="maximize-btn circle-btn green">
+              <i class="fa fa-window-maximize"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="popup-body">
+          <div class="skill-list">
+            <h1>Habilidades Pretendidas</h1>
+            <ul>
+              <li><b class="skills">1️⃣ Listening (Escuta)</b> – Compreender o que é falado.</li>
+              <li><b class="skills">2️⃣ Speaking (Fala)</b> – Conseguir se expressar verbalmente.</li>
+              <li><b class="skills">3️⃣ Reading (Leitura)</b> – Entender textos escritos.</li>
+              <li><b class="skills">4️⃣ Writing (Escrita)</b> – Escrever corretamente no idioma.</li>
+              <li><b class="skills">5️⃣ Pronunciation (Pronúncia)</b> – Falar com clareza e precisão.</li>
+              <li><b class="skills">6️⃣ Grammar (Gramática)</b> – Usar corretamente as regras do idioma.</li>
+              <li><b class="skills">7️⃣ Vocabulary (Vocabulário)</b> – Conhecer e utilizar palavras e expressões. 🚀</li>
+              <li><b class="skills">8️⃣ Spelling (Ortografia)</b> – Escrever as palavras corretamente.</li>
+              <li><b class="skills">9️⃣ Fluency (Fluência)</b> – Falar de forma natural e sem pausas longas.</li>
+              <li><b class="skills">🔟 Comprehension (Compreensão)</b> – Entender o contexto geral de uma conversa ou texto, mesmo sem conhecer todas as palavras.</li>
+            </ul>
+          </div>
+<!--
+          <div class="project-container">
+            <h1>Projetos</h1>
+            <div class="all-projects">
+              <div class="project-box">
+                <img
+                  src="https://raw.githubusercontent.com/0xdavidmorato/0xdavidmorato.github.io/main/home_drinkdrips.webp"
+                  alt="" />
+                <div class="overlay">
+                  <h3>DrinkDrips</h3>
+                  <button id="more-btn" class="more-btn">
+                    <span>Visite o site</span>
+                  </button>
+                </div>
+              </div>
+
+              <div class="project-box">
+                <img
+                  src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/08c8b66f-7e24-42d9-848d-23e30f7e1968"
+                  alt="" />
+                <div class="overlay">
+                  <h3>Landing Page Template</h3>
+                  <button class="more-btn">
+                    <span>Learn More</span>
+                  </button>
+                </div>
+              </div>
+
+              <div class="project-box">
+                <img
+                  src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/d6e74bee-a0f6-416e-98cc-b0985caf507f"
+                  alt="" />
+                <div class="overlay">
+                  <h3>Travel Landing Page</h3>
+                  <button class="more-btn">
+                    <span>Learn More</span>
+                  </button>
+                </div>
+              </div>
+
+              <div class="project-box">
+                <img
+                  src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/28946a23-30af-4b36-b30b-e4a3e696aaf6"
+                  alt="" />
+                <div class="overlay">
+                  <h3>Plant Search App</h3>
+                  <button class="more-btn">
+                    <span>Learn More</span>
+                  </button>
+                </div>
+              </div> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+<!-- DASHBOARD MÚSICAS -->
+<div class="popup" id="services">
+    <div class="popup-container">
+        <div class="popup-header">
+            <div class="button-container">
+                <button class="close-btn circle-btn red"><i class="fa fa-times"></i></button>
+                <button class="close-btn circle-btn yellow"><i class="fa fa-window-minimize"></i></button>
+                <button class="maximize-btn circle-btn green"><i class="fa fa-window-maximize"></i></button>
+            </div>
+        </div>
+        <div class="popup-body services-container">
+            <h1>Músicas</h1>
+            <ul class="control" id="custom-control">
+                        <li class="prev"><ion-icon class="arrow" name="chevron-back-outline"></ion-icon></li>
+                        <li class="next"><ion-icon class="arrow" name="chevron-forward-outline"></ion-icon></li>
+                    </ul>
+            <div class="slider-container">
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                        
+
+                        <!-- Slide I'll Never Love Again -->
+                        <div class="swiper-slide">
+
+                            <div class="popup-body lyrics-container">
+                                        <div class="lyrics" id="lyrics1"> 
+                                            <h2>I'll Never Love Again - Lady Gaga <i class="fa fa-music"></i> </h2>
+                                            <hr>
+                                                    <b>Wish I could</b> <span class="ipa">UÍ CHÁI KUD</span>
+                                                    <b>I could've said goodbye</b> <span class="ipa">AI KUDÉV SÉD GUD BÁI</span>
+                                                    <b>I would've said what I wanted to</b> <span class="ipa">AI ÚODEV SÉD UARÁIUANTÉ TIU</span>
+                                                    <b>Maybe even cried for you</b> <span class="ipa">MEIBÍ IVIN KRÁID FÓR IÚ</span>
+                                            
+                                                    <b>If I knew it would be the last time</b> <span class="ipa">IFÁI NIUː IT WUDI BÍDÃ LÉSS TAIM</span>
+                                                    <b>I would've broke my heart in two</b> <span class="ipa">AI ÚODEV BROUK MAI HÃRTIN TU</span>
+                                                    <b>Trying to save a part of you</b> <span class="ipa">TRAIMTÚ SEIVA PARÓVIU</span>
+                                            
+                                                    <h2>Refrão:</h2>
+                                                    <b>Don't wanna feel another touch</b> <span class="ipa">DON UANA FIL ANÓRER TOUT</span>
+                                                    <b>Don't wanna start another fire</b> <span class="ipa">DON UANA STAR ANÓRER FÁAIER</span>
+                                                    <b>Don't wanna know another kiss</b> <span class="ipa">DON UANA NOU ÃNÃDÃR KISS</span>
+                                                    <b>No other name falling off my lips</b> <span class="ipa">NOU ÁDÃR NEIM FÓLIN ÓF MAI LIPS</span>
+                                                    <b>Don't wanna give my heart away</b> <span class="ipa">DON UANA GIV MAI HÃRT AUEI</span>
+                                                    <b>To another stranger</b> <span class="ipa">TU ÃNÃDÃR STREINDJÃR</span>
+                                                    <b>Or let another day begin</b> <span class="ipa">OR LÉT ANÓRER DEI BI GUIN</span>
+                                                    <b>Won't even let the sunlight in</b> <span class="ipa">UÓN ÍVUN LÉT DÃ SÃNLAIRÍN</span>
+                                                    <b>No I'll never love again</b> <span class="ipa">NOU AIL NÉVER LÃV AGAIN</span>
+                                                    <b>I'll never love again</b> <span class="ipa">AIL NÉVER LÃV AGAIN/span>
+                                                    <b>Oouu oou oou</b> <span class="ipa">OOU OOU OOU</span>
+                                            
+                                                    <b>When we first met</b> <span class="ipa">UEN UÍ FÃRST MIT</span>
+                                                    <b>I never thought that I would fall</b> <span class="ipa">AI NÉVER TÓT DÉRÁI UUD FÓL</span>
+                                                    <b>I never thought that I'd find myself</b> <span class="ipa">AI NÉVER TÓT DÉRÁIFÁIND MAISÉLF</span>
+                                                    <b>Lying in your arms</b> <span class="ipa">LÁIIN INNIÓR ÁRMS</span>
+                                                    <b>And I wanna pretend that it's not true</b> <span class="ipa">ENDA UANA PRITÉN DÉRITS NÓT TRÚ</span>
+                                                    <b>Oh, baby that you're gone</b> <span class="ipa">ÔU, BEIBI DÉR IÓR GÓN</span>
+                                                    <b>Cause my world keeps turning and turning and turning</b> <span class="ipa">CÓZ MAI UÃRLD KIPS TÃRNIN EN TÃRNIN EN TÃRNIN</span>
+                                                    <b>But I'm not moving on</b> <span class="ipa">BÃTÁI NÓT MÚVIN ÓN</span>
+                                            
+                                                    <h2>Refrão:</h2>
+                                                    <b>Don't wanna feel another touch</b> <span class="ipa">DON UANA FIL ANÓRER TOUT</span>
+                                                    <b>Don't wanna start another fire</b> <span class="ipa">DON UANA STAR ANÓRER FÁAIER</span>
+                                                    <b>Don't wanna know another kiss</b> <span class="ipa">DON UANA NOU ÃNÃDÃR KISS</span>
+                                                    <b>No other name falling off my lips</b> <span class="ipa">NOU ÁDÃR NEIM FÓLIN ÓF MAI LIPS</span>
+                                                    <b>Don't wanna give my heart away</b> <span class="ipa">DON UANA GIV MAI HÃRT AUEI</span>
+                                                    <b>To another stranger</b> <span class="ipa">TU ÃNÃDÃR STREINDJÃR</span>
+                                                    <b>Or let another day begin</b> <span class="ipa">OR LÉT ANÓRER DEI BI GUIN</span>
+                                                    <b>Won't even let the sunlight in</b> <span class="ipa">UÓN ÍVUN LÉT DÃ SÃNLAIRÍN</span>
+                                                    <b>No I'll never love again</b> <span class="ipa">NOU AIL NÉVER LÃV AGAIN</span>
+                                                    
+                                                    <h2>Ponte:</h2>
+                                                    <b>I don't wanna know this feeling unless it's you and me</b><span class="ipa">AI DON UANA NOU DIS FILIN ANLÉS ITS IU EN MI</span>
+                                                    <b>I don't wanna waste a moment</b> <span class="ipa">AI DON UANA UEIST A MÔUMENT</span>
+                                                    <b>And I don't wanna give somebody else the better part of me</b> <span class="ipa">ENDAI DON UANA GIV SAMBÓDI ÉLSE DÃ BÉRER PÁRÓV MI</span>
+                                                    <b>I would rather wait for you</b> <span class="ipa">AI ÚUD RÉRER UEIT FÓRIÚ</span>
+
+                                                    <h2>Último Refrão:</h2>
+                                                    <b>Don't wanna feel another touch</b> <span class="ipa">DON UANA FIL ANÓRER TOUT</span>
+                                                    <b>Don't wanna start another fire</b> <span class="ipa">DON UANA STAR ANÓRER FÁAIER</span>
+                                                    <b>Don't wanna know another kiss</b> <span class="ipa">DON UANA NOU ÃNÃDÃR KISS</span>
+                                                    <b>Baby unless they are your lips </b> <span class="ipa">BEIBI ANLÉS DEI ÁR IÓR LIPS</span>
+                                                    <b>Don't wanna give my heart away</b> <span class="ipa">DON UANA GIV MAI HÃRT AUEI</span>
+                                                    <b>To another stranger</b> <span class="ipa">TU ÃNÃDÃR STREINDJÃR</span>
+                                                    <b>Or let another day begin</b> <span class="ipa">OR LÉT ANÓRER DEI BI GUIN</span>
+                                                    <b>Won't even let the sunlight in</b> <span class="ipa">UÓN ÍVUN LÉT DÃ SÃNLAIRÍN</span>
+                                                    <b>Oh I'll never love again</b> <span class="ipa">ÔU AIL NÉVER LÃV AGAIN</span>
+
+                                                    <h2>Final:</h2>
+                                                    <b>Love again</b> <span class="ipa">LÃV AGAIN</span>
+                                                    <b>I'll never love again </b> <span class="ipa">AIL NÉVER LÃV AGAIN</span>
+                                                    <b>I'll never love </b> <span class="ipa">AIL NÉVER LÃV</span>
+                                                    <b>Again</b> <span class="ipa">AGAIN</span>
+                                                    <b>I won't I won't I swear I can't</b> <span class="ipa">AI UÔNT AI UÔNT AI SUÉR AI KÉNT</span>
+                                                    <b>I wish I could but I just won't</b> <span class="ipa">AI UÍ CHÁI KUD BÃT AI DJÃST UÔNT</span>
+                                                    <b>I'll never love again</b> <span class="ipa">AIL NÉVER LÃV AGAIN</span>
+                                                    <b>I'll never love </b> <span class="ipa">AIL NÉVER LÃV</span>
+                                                    <b>Again</b> <span class="ipa">AGAIN</span>
+
+                                        </div>
+                                    </div>
+                        </div>
+
+                        <!-- Slide Shalow -->
+                        <div class="swiper-slide">
+                            <div class="popup-body lyrics-container">
+                                <div class="lyrics" id="lyrics2"> 
+                                    <h2>Shallow - Lady Gaga & Bradley Cooper <i class="fa fa-music"></i></h2>
+                                    <hr>
+                                    <b>Tell me something, girl</b> <span class="ipa">TÉL MI SÃMTHIN, GÃRL</span>
+                                    <b>Are you happy in this modern world?</b> <span class="ipa">ÁR IU RÉPI IN DIS MÓDÃRN UÃRLD?</span>
+                                    <b>Or do you need more?</b> <span class="ipa">ÓR DU IU NÍD MÓR?</span>
+                                    <b>Is there something else you're searching for?</b> <span class="ipa">IS DÉR SÃMTHIN ÉLSE IÓR SÃRCHIN FÓR?</span>
+                                    
+                                    <h2>Refrão:</h2>
+                                    <b>I'm falling</b> <span class="ipa">ÁIM FÓLIN</span>
+                                    <b>In all the good times I find myself</b> <span class="ipa">IN ÓL DÃ GUD TAIMS ÁI FÁIND MAISÉLF</span>
+                                    <b>Longing for change</b> <span class="ipa">LÓNGUIN FÓR TCHÊINDJ</span>
+                                    <b>And in the bad times, I fear myself</b> <span class="ipa">EN IN DÃ BÉD TAIMS, ÁI FIR MAISÉLF</span>
+                                    
+                                    <b>Tell me something, boy</b> <span class="ipa">TÉL MI SÃMTHIN, BÓI</span>
+                                    <b>Aren't you tired trying to fill that void?</b> <span class="ipa">ÁRNCHU TÁIRD TRAIIN TÚ FIL DÉT VÓID?</span>
+                                    <b>Or do you need more?</b> <span class="ipa">ÓR DU IU NÍD MÓR?</span>
+                                    <b>Ain't it hard keeping it so hardcore?</b> <span class="ipa">ÊINT IT HÁRD KÍIPIN IT SÔ HÁRDKÓR?</span>
+                                    
+                                    <h2>Refrão:</h2>
+                                    <b>I'm falling</b> <span class="ipa">ÁIM FÓLIN</span>
+                                    <b>In all the good times I find myself</b> <span class="ipa">IN ÓL DÃ GUD TAIMS ÁI FÁIND MAISÉLF</span>
+                                    <b>Longing for change</b> <span class="ipa">LÓNGUIN FÓR TCHÊINDJ</span>
+                                    <b>And in the bad times, I fear myself</b> <span class="ipa">EN IN DÃ BÉD TAIMS, ÁI FIR MAISÉLF</span>
+                                    
+                                    <h2>Ponte:</h2>
+                                    <b>I'm off the deep end, watch as I dive in</b> <span class="ipa">ÁIM ÓF DÃ DÍP ÉND, UÓTCH ÉZ ÁI DÁIV IN</span>
+                                    <b>I'll never meet the ground</b> <span class="ipa">ÁIL NÉVER MÍT DÃ GRAUND</span>
+                                    <b>Crash through the surface, where they can't hurt us</b> <span class="ipa">KRÉSH TRU DÃ SÃRFÊIS, UÉR DEI KÉNT HÃRT ÃS</span>
+                                    <b>We're far from the shallow now</b> <span class="ipa">UÍR FÁR FROM DÃ SHÉLÔU NÁU</span>
+                                    
+                                    <h2>Final:</h2>
+                                    <b>In the sha-ha, sha-la-low</b> <span class="ipa">IN DÃ SHÁ-RÁ, SHÁ-LÁ-LÔU</span>
+                                    <b>In the sha-ha, sha-la-low</b> <span class="ipa">IN DÃ SHÁ-RÁ, SHÁ-LÁ-LÔU</span>
+                                    <b>In the sha-ha, sha-la-low</b> <span class="ipa">IN DÃ SHÁ-RÁ, SHÁ-LÁ-LÔU</span>
+                                    <b>We're far from the shallow now</b> <span class="ipa">UÍR FÁR FROM DÃ SHÉLÔU NÁU</span>
+                                </div>
+                            </div>
+                        </div>
+
+                       <!-- Slide Iris -->
+                        <div class="swiper-slide">
+                            <div class="popup-body lyrics-container">
+                                <div class="lyrics" id="lyricsIris"> 
+                                    <h2>Iris - Goo Goo Dolls <i class="fa fa-music"></i></h2>
+                                    <hr>
+                                    <b>And I'd give up forever to touch you</b> <span class="ipa">ÉND ÁID GUÍV ÃP FORÉVER TÚ TÃTCH IU</span>
+                                    <b>'Cause I know that you feel me somehow</b> <span class="ipa">KÃZ ÁI NÔU DÉT IU FIL MI SÃMHAU</span>
+                                    <b>You're the closest to heaven that I'll ever be</b> <span class="ipa">IÓR DÃ CLÔZÊST TÚ HÉVEN DÉT ÁIL ÉVER BÍ</span>
+                                    <b>And I don't wanna go home right now</b> <span class="ipa">ÉND ÁI DÔNT UÃNÃ GÔU HÔUM RÁIT NÁU</span>
+                                    
+                                    <h2>Refrão:</h2>
+                                    <b>And all I can taste is this moment</b> <span class="ipa">ÉND ÓL ÁI KÉN TÊIST IZ DIS MÔUMÃNT</span>
+                                    <b>And all I can breathe is your life</b> <span class="ipa">ÉND ÓL ÁI KÉN BRÍD IZ IÓR LÁIF</span>
+                                    <b>When sooner or later it's over</b> <span class="ipa">UÉN SÚNER ÓR LÊIRÃR ITS ÔUVER</span>
+                                    <b>I just don't wanna miss you tonight</b> <span class="ipa">ÁI DJÃST DÔNT UÃNÃ MÍS IU TUNÁIT</span>
+                                    
+                                    <h2>Ponte:</h2>
+                                    <b>And I don't want the world to see me</b> <span class="ipa">ÉND ÁI DÔNT UÃNT DÃ UÃRLD TÚ SÍ MI</span>
+                                    <b>'Cause I don't think that they'd understand</b> <span class="ipa">KÃZ ÁI DÔNT THINK DÉT DEID ÃNDERSTÉND</span>
+                                    <b>When everything's made to be broken</b> <span class="ipa">UÉN ÉVRI THINGS MÉID TÚ BÍ BRÔUKÃN</span>
+                                    <b>I just want you to know who I am</b> <span class="ipa">ÁI DJÃST UÃNT IU TÚ NÔU RÚ ÁI ÉM</span>
+                                    
+                                    <h2>Final:</h2>
+                                    <b>And you can't fight the tears that ain't coming</b> <span class="ipa">ÉND IU KÉNT FÁIT DÃ TÍRS DÉT ÊINT KÃMIN</span>
+                                    <b>Or the moment of truth in your lies</b> <span class="ipa">ÓR DÃ MÔUMÃNT ÓV TRÚTH IN IÓR LÁIS</span>
+                                    <b>When everything feels like the movies</b> <span class="ipa">UÉN ÉVRI THING FÍLS LÁIK DÃ MÚVÍS</span>
+                                    <b>Yeah, you bleed just to know you're alive</b> <span class="ipa">IÉ, IU BLÍD DJÃST TÚ NÔU IÓR ÃLÁIV</span>
+                                </div>
+                            </div>
+                        </div>
+
+                       <!-- Slide Redemption Song -->
+                        <div class="swiper-slide">
+                            <div class="popup-body lyrics-container">
+                                <div class="lyrics" id="lyricsRedemption"> 
+                                    <h2>Redemption Song - Bob Marley <i class="fa fa-music"></i></h2>
+                                    <hr>
+                                    <b>Old pirates, yes, they rob I</b> <span class="ipa">ÔULD PÁIRÃTS, IÉS, DEI RÓB ÁI</span>
+                                    <b>Sold I to the merchant ships</b> <span class="ipa">SÔULD ÁI TÚ DÃ MÃRCHANT SHIPS</span>
+                                    <b>Minutes after they took I</b> <span class="ipa">MÍNÃTS ÁFTER DEI TÚK ÁI</span>
+                                    <b>From the bottomless pit</b> <span class="ipa">FROM DÃ BÓTÃMLESS PIT</span>
+                                    
+                                    <h2>Refrão:</h2>
+                                    <b>But my hand was made strong</b> <span class="ipa">BÃT MÁI HÉND UÃZ MÉID STRÓNG</span>
+                                    <b>By the hand of the Almighty</b> <span class="ipa">BÁI DÃ HÉND ÓV DÃ ÓLMAITI</span>
+                                    <b>We forward in this generation</b> <span class="ipa">UÍ FÓRWÃRD IN DIS DJÊNERÊIXÃN</span>
+                                    <b>Triumphantly</b> <span class="ipa">TRÁIÃMFÃNTLI</span>
+                                    
+                                    <h2>Ponte:</h2>
+                                    <b>Won't you help to sing</b> <span class="ipa">UÔNT IU HÉLP TÚ SING</span>
+                                    <b>These songs of freedom?</b> <span class="ipa">DÍS SÓNGS ÓV FRÍDÃM?</span>
+                                    <b>'Cause all I ever have</b> <span class="ipa">KÃZ ÓL ÁI ÉVER HÉV</span>
+                                    <b>Redemption songs</b> <span class="ipa">RÍDÊMPXÃN SÓNGS</span>
+                                    
+                                    <h2>Final:</h2>
+                                    <b>Emancipate yourselves from mental slavery</b> <span class="ipa">IMÃNSIPEIT IÓRSELVES FROM MÊNTÃL SLÉVRI</span>
+                                    <b>None but ourselves can free our minds</b> <span class="ipa">NÃN BÃT AURSELVES KÉN FRÍ ÁUR MÁINDS</span>
+                                    <b>Have no fear for atomic energy</b> <span class="ipa">HÉV NÔ FÍR FOR ÃTÓMIK ÉNERGI</span>
+                                    <b>'Cause none of them can stop the time</b> <span class="ipa">KÃZ NÃN ÓV DEM KÉN STÓP DÃ TAIM</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Slide Wish You Were Here -->
+                        <div class="swiper-slide">
+                            <div class="popup-body lyrics-container">
+                                <div class="lyrics" id="lyricsWishYouWereHere"> 
+                                    <h2>Wish You Were Here - Pink Floyd <i class="fa fa-music"></i></h2>
+                                    <hr>
+                                    <b>So, so you think you can tell</b> <span class="ipa">SÔU, SÔU IU THINK IU KÉN TÉL</span>
+                                    <b>Heaven from Hell?</b> <span class="ipa">HÉVÃN FROM HÉL?</span>
+                                    <b>Blue skies from pain?</b> <span class="ipa">BLÚ SKÁIS FROM PÊIN?</span>
+                                    <b>Can you tell a green field</b> <span class="ipa">KÉN IU TÉL Ã GRÍN FÍLD</span>
+                                    <b>From a cold steel rail?</b> <span class="ipa">FROM Ã CÔULD STÍL RÊIL?</span>
+                                    <b>A smile from a veil?</b> <span class="ipa">Ã SMÁIL FROM Ã VÊIL?</span>
+                                    <b>Do you think you can tell?</b> <span class="ipa">DU IU THINK IU KÉN TÉL?</span>
+                                    
+                                    <h2>Refrão:</h2>
+                                    <b>Did they get you to trade</b> <span class="ipa">DID DEI GÉT IU TÚ TRÊID</span>
+                                    <b>Your heroes for ghosts?</b> <span class="ipa">IÓR HÍROUS FOR GÔUSTS?</span>
+                                    <b>Hot ashes for trees?</b> <span class="ipa">HÓT ÉXES FOR TRÍS?</span>
+                                    <b>Hot air for a cool breeze?</b> <span class="ipa">HÓT ÉR FOR Ã KÚL BRÍZ?</span>
+                                    <b>Cold comfort for change?</b> <span class="ipa">CÔULD CÓMFORT FOR TCHÊINDJ?</span>
+                                    <b>Did you exchange</b> <span class="ipa">DID IU EXTCHÊINDJ</span>
+                                    <b>A walk-on part in the war</b> <span class="ipa">Ã UÓK-ÓN PÁRT IN DÃ UÓR</span>
+                                    <b>For a lead role in a cage?</b> <span class="ipa">FOR Ã LÍD RÔU IN Ã KÊIDJ?</span>
+                                    
+                                    <h2>Final:</h2>
+                                    <b>How I wish, how I wish you were here</b> <span class="ipa">HÁU ÁI UÍX, HÁU ÁI UÍX IU UÃR HÍR</span>
+                                    <b>We're just two lost souls</b> <span class="ipa">UÍR DJÃST TCHÚ LÓST SÔULS</span>
+                                    <b>Swimming in a fish bowl, year after year</b> <span class="ipa">SUÍMING IN Ã FÍX BÔUL, ÍR ÁFTER ÍR</span>
+                                    <b>Running over the same old ground</b> <span class="ipa">RÃNING ÔUVER DÃ SÊIM ÔULD GRAUND</span>
+                                    <b>What have we found?</b> <span class="ipa">UÓT HÉV UÍ FÁUND?</span>
+                                    <b>The same old fears</b> <span class="ipa">DÃ SÊIM ÔULD FÍRS</span>
+                                    <b>Wish you were here</b> <span class="ipa">UÍX IU UÃR HÍR</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Slide Wonderwall -->
+                        <div class="swiper-slide">
+                            <div class="popup-body lyrics-container">
+                                <div class="lyrics" id="lyricsWonderwall"> 
+                                    <h2>Wonderwall - Oasis <i class="fa fa-music"></i></h2>
+                                    <hr>
+                                    <b>Today is gonna be the day</b> <span class="ipa">TUDÊI IZ GÃNÃ BÍ DÃ DÊI</span>
+                                    <b>That they're gonna throw it back to you</b> <span class="ipa">DÉT DÉIR GÃNÃ TRÔU IT BÉK TÚ IU</span>
+                                    <b>By now you should've somehow</b> <span class="ipa">BÁI NÁU IU XÚDÃV SÃMHAU</span>
+                                    <b>Realized what you gotta do</b> <span class="ipa">RÍÃLÁIZD UÁT IU GÁRÃ DÚ</span>
+                                    <b>I don't believe that anybody</b> <span class="ipa">ÁI DÔNT BILÍV DÉT ÉNIBÓDI</span>
+                                    <b>Feels the way I do about you now</b> <span class="ipa">FÍLZ DÃ UÊI ÁI DÚ ÃBÁUT IU NÁU</span>
+                                    
+                                    <h2>Refrão:</h2>
+                                    <b>Because maybe</b> <span class="ipa">BICÓZ MÊIBI</span>
+                                    <b>You're gonna be the one that saves me</b> <span class="ipa">IÓR GÃNÃ BÍ DÃ UÃN DÉT SÊIVZ MÍ</span>
+                                    <b>And after all</b> <span class="ipa">ÉND ÁFTER ÓL</span>
+                                    <b>You're my wonderwall</b> <span class="ipa">IÓR MÁI UÃNDERUÓL</span>
+                                    
+                                    <h2>Verso 2:</h2>
+                                    <b>Backbeat, the word is on the street</b> <span class="ipa">BÉKBIT, DÃ UÔRD IZ ÓN DÃ STRÍT</span>
+                                    <b>That the fire in your heart is out</b> <span class="ipa">DÉT DÃ FÁIÃR IN IÓR HÁRT IZ ÁUT</span>
+                                    <b>I'm sure you've heard it all before</b> <span class="ipa">ÁIM XÔR IUV HÃRD IT ÓL BIFÓR</span>
+                                    <b>But you never really had a doubt</b> <span class="ipa">BÃT IU NÉVÃ RÍLI HÉD Ã DÁUT</span>
+                                    <b>I don't believe that anybody</b> <span class="ipa">ÁI DÔNT BILÍV DÉT ÉNIBÓDI</span>
+                                    <b>Feels the way I do about you now</b> <span class="ipa">FÍLZ DÃ UÊI ÁI DÚ ÃBÁUT IU NÁU</span>
+                                    
+                                    <h2>Final:</h2>
+                                    <b>Because maybe</b> <span class="ipa">BICÓZ MÊIBI</span>
+                                    <b>You're gonna be the one that saves me</b> <span class="ipa">IÓR GÃNÃ BÍ DÃ UÃN DÉT SÊIVZ MÍ</span>
+                                    <b>And after all</b> <span class="ipa">ÉND ÁFTER ÓL</span>
+                                    <b>You're my wonderwall</b> <span class="ipa">IÓR MÁI UÃNDERUÓL</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Slide Fast Car -->
+                        <div class="swiper-slide">
+                            <div class="popup-body lyrics-container">
+                                <div class="lyrics" id="lyricsFastCar"> 
+                                    <h2>Fast Car - Luke Combs <i class="fa fa-music"></i></h2>
+                                    <hr>
+                                    <b>You got a fast car</b> <span class="ipa">IU GÁRÃ FÉST CÁR</span>
+                                    <b>I want a ticket to anywhere</b> <span class="ipa">ÁI UÓNT Ã TÍKET TÚ ÉNIUÉR</span>
+                                    <b>Maybe we make a deal</b> <span class="ipa">MÊIBI UÍ MÊIK Ã DÍL</span>
+                                    <b>Maybe together we can get somewhere</b> <span class="ipa">MÊIBI TUGÉDÃ UÍ KÃN GUÉT SÃMUÉR</span>
+                                    <b>Any place is better</b> <span class="ipa">ÉNI PLEIS IZ BÉRÃR</span>
+                                    <b>Starting from zero, got nothing to lose</b> <span class="ipa">STÁRIN FROM ZÍROU, GÓT NÃTHIN TÚ LÚZ</span>
+                                    <b>Maybe we'll make something</b> <span class="ipa">MÊIBI UÍL MÊIK SÃMTHIN</span>
+                                    <b>Me, myself, I got nothing to prove</b> <span class="ipa">MÍ, MAISÉLF, ÁI GÓT NÃTHIN TÚ PRÚV</span>
+                                    
+                                    <h2>Refrão:</h2>
+                                    <b>So remember when we were driving</b> <span class="ipa">SÔ RIMÉMBÃR UÉN UÍ UÃR DRÁIVIN</span>
+                                    <b>Driving in your car</b> <span class="ipa">DRÁIVIN IN IÓR CÁR</span>
+                                    <b>Speed so fast, felt like I was drunk</b> <span class="ipa">SPÍD SÔ FÉST, FÉLT LÁIK ÁI UÃZ DRÃNK</span>
+                                    <b>City lights lay out before us</b> <span class="ipa">SÍRI LÁITS LÊI ÁUT BIFÓR ÃS</span>
+                                    <b>And your arm felt nice wrapped around my shoulder</b> <span class="ipa">ÉND IÓR ÁRM FÉLT NÁIS RÉPT ÃRÁUND MÁI XÔULDÃR</span>
+                                    <b>And I had a feeling that I belonged</b> <span class="ipa">ÉND ÁI HÉD Ã FÍLIN DÉT ÁI BILÓNGD</span>
+                                    <b>I had a feeling I could be someone</b> <span class="ipa">ÁI HÉD Ã FÍLIN ÁI CÚD BÍ SÃMUÃN</span>
+                                    
+                                    <h2>Verso 2:</h2>
+                                    <b>You got a fast car</b> <span class="ipa">IU GÁRÃ FÉST CÁR</span>
+                                    <b>We go cruising to entertain ourselves</b> <span class="ipa">UÍ GÔ CRÚZIN TÚ ENTÃRTEIN AURSELVES</span>
+                                    <b>Still ain't got a job</b> <span class="ipa">STÍL ÊINT GÓT Ã JÓB</span>
+                                    <b>Not working, just a little bit harder</b> <span class="ipa">NÓT UÃRKIN, DJÃS Ã LÍRÃL BÍT HÁRDÃR</span>
+                                    <b>I want to be someone</b> <span class="ipa">ÁI UÓNT TÚ BÍ SÃMUÃN</span>
+                                    <b>Someone who can take care of me</b> <span class="ipa">SÃMUÃN RU KÃN TEIK KÉR ÃV MÍ</span>
+                                    
+                                    <h2>Final:</h2>
+                                    <b>You got a fast car</b> <span class="ipa">IU GÁRÃ FÉST CÁR</span>
+                                    <b>Is it fast enough so we can fly away?</b> <span class="ipa">IZ IT FÉST INÃF SÔ UÍ KÃN FLÁI ÃUÊI?</span>
+                                    <b>We gotta make a decision</b> <span class="ipa">UÍ GÓRÃ MÊIK Ã DICÍJÃN</span>
+                                    <b>Leave tonight or live and die this way</b> <span class="ipa">LÍV TUNÁIT ÓR LÍV ÉND DÁI DÍS UÊI</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Slide I'm Yours -->
+                        <div class="swiper-slide">
+                            <div class="popup-body lyrics-container">
+                                <div class="lyrics" id="lyrics7"> 
+                                    <h2>I'm Yours - Jason Mraz <i class="fa fa-music"></i></h2>
+                                    <hr>
+                                    <b>Well, you done done me and you bet I felt it</b> <span class="ipa">UÉL, IU DÃN DÃN MI ÉN IU BÉT ÁI FÉLT IT</span>
+                                    <b>I tried to be chill, but you're so hot that I melted</b> <span class="ipa">ÁI TRAID TU BI TCHÍL, BÃT IÓR SÔ HÓT DÉT ÁI MÉLTED</span>
+                                    <b>I fell right through the cracks</b> <span class="ipa">ÁI FÉL RÁIT TRU DÃ KRÉKS</span>
+                                    <b>And now I'm tryin' to get back</b> <span class="ipa">ÉN NÁU ÁI TRAIIN TU GUÉT BÉK</span>
+                                    
+                                    <h2>Refrão:</h2>
+                                    <b>But I won't hesitate</b> <span class="ipa">BÃT ÁI UÔNT RÉZITÊIT</span>
+                                    <b>No more, no more</b> <span class="ipa">NÔ MÓR, NÔ MÓR</span>
+                                    <b>It cannot wait, I'm yours</b> <span class="ipa">IT KÉNÓT UÊIT, ÁIM IÓRS</span>
+                                    
+                                    <b>Well, open up your mind and see like me</b> <span class="ipa">UÉL, ÔUPÃN ÃP IÓR MÁIND ÉN SÍ LÁIK MI</span>
+                                    <b>Open up your plans and, damn, you're free</b> <span class="ipa">ÔUPÃN ÃP IÓR PLÉNS ÉN, DÉM, IÓR FRÍ</span>
+                                    <b>Look into your heart, and you'll find love</b> <span class="ipa">LÚK INTU IÓR HÁRT, ÉN IU FÁIND LÓV</span>
+                                    
+                                    <h2>Ponte:</h2>
+                                    <b>So I won't hesitate</b> <span class="ipa">SÔ ÁI UÔNT RÉZITÊIT</span>
+                                    <b>No more, no more</b> <span class="ipa">NÔ MÓR, NÔ MÓR</span>
+                                    <b>It cannot wait, I'm sure</b> <span class="ipa">IT KÉNÓT UÊIT, ÁIM SHÓR</span>
+                                    
+                                    <h2>Final:</h2>
+                                    <b>No, I won't hesitate</b> <span class="ipa">NÔ, ÁI UÔNT RÉZITÊIT</span>
+                                    <b>No more, no more</b> <span class="ipa">NÔ MÓR, NÔ MÓR</span>
+                                    <b>It cannot wait, I'm yours</b> <span class="ipa">IT KÉNÓT UÊIT, ÁIM IÓRS</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Slide Sweet Child O'Mine -->
+                        <div class="swiper-slide">
+                            <div class="popup-body lyrics-container">
+                                <div class="lyrics" id="lyrics8"> 
+                                    <h2>Sweet Child O'Mine - Guns N’ Roses <i class="fa fa-music"></i></h2>
+                                    <hr>
+                                    <b>She's got a smile that it seems to me</b> <span class="ipa">SHÍS GÓT Ã SMÁIL DÉRIT SÍMS TU MI</span>
+                                    <b>Reminds me of childhood memories</b> <span class="ipa">RIMÁINDS MI ÓV TCHÁILDHÃD MÉMORIZ</span>
+                                    <b>Where everything was as fresh as the bright blue sky</b> <span class="ipa">UÉR ÉVRI THÍN UÓZ ÉZ FRÉSH ÉZ DÃ BRÁIT BLÚ SKÁI</span>
+                                    
+                                    <h2>Refrão:</h2>
+                                    <b>Oh, oh, oh, sweet child o'mine</b> <span class="ipa">ÔU, ÔU, ÔU, SUÍT TCHÁILD Ô MÁIN</span>
+                                    <b>Oh, oh, oh, sweet love of mine</b> <span class="ipa">ÔU, ÔU, ÔU, SUÍT LÓV ÓV MÁIN</span>
+                                    
+                                    <b>She's got eyes of the bluest skies</b> <span class="ipa">SHÍS GÓT ÁIS ÓV DÃ BLÚEST SKÁIS</span>
+                                    <b>As if they thought of rain</b> <span class="ipa">ÉZ ÍF DÉI THÓT ÓV RÊIN</span>
+                                    <b>I hate to look into those eyes</b> <span class="ipa">ÁI RÊIT TU LÚK INTU DÔUS ÁIS</span>
+                                    <b>And see an ounce of pain</b> <span class="ipa">ÉN SÍ ÉN ÁUNS ÓV PÊIN</span>
+                                    
+                                    <h2>Ponte:</h2>
+                                    <b>Oh, oh, oh, sweet child o'mine</b> <span class="ipa">ÔU, ÔU, ÔU, SUÍT TCHÁILD Ô MÁIN</span>
+                                    <b>Oh, oh, oh, sweet love of mine</b> <span class="ipa">ÔU, ÔU, ÔU, SUÍT LÓV ÓV MÁIN</span>
+                                    
+                                    <h2>Final:</h2>
+                                    <b>Where do we go?</b> <span class="ipa">UÉR DU UÍ GÔU?</span>
+                                    <b>Where do we go now?</b> <span class="ipa">UÉR DU UÍ GÔU NÁU?</span>
+                                    <b>Where do we go?</b> <span class="ipa">UÉR DU UÍ GÔU?</span>
+                                    <b>Sweet child o’mine</b> <span class="ipa">SUÍT TCHÁILD Ô MÁIN</span>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+  <!-- FIM DASHBOARD MÚSICAS -->
+
+
+<!-- DASHBOARD CONTATO -->
+    <div class="popup" id="contact">
+      <div class="popup-container">
+        <div class="popup-header">
+          <div class="button-container">
+            <button class="close-btn circle-btn red">
+              <i class="fa fa-times"></i>
+            </button>
+            <button class="close-btn circle-btn yellow">
+              <i class="fa fa-window-minimize"></i>
+            </button>
+            <button class="maximize-btn circle-btn green">
+              <i class="fa fa-window-maximize"></i>
+            </button>
+          </div>
+        </div>
+        <div class="popup-body contact-container">
+          <h1>Contato</h1>
+          <p>Curtiu? Se quiser sugerir alguma música, utilize o formulário abaixo:</p>
+          <!-- <p><i class="fa fa-envelope-o"></i> <a href="mailto:0xdavidmorato@gmail.com" class="email-link">0xdavidmorato@gmail.com</a>
+</p>-->
+          <form action="https://formspree.io/f/xanwjejd" method="post">
+            <label for="name">Nome</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Your name.." />
+
+            <label for="email">E-mail</label>
+            <input
+              type="text"
+              id="email"
+              name="email"
+              placeholder="Your mail.." />
+
+            <label for="subject">Mensagem</label>
+            <textarea
+              id="subject"
+              name="subject"
+              placeholder="Write something.."
+              style="height: 200px"></textarea>
+
+            <button class="submit-btn more-btn" type="submit">
+              <span>Enviar <i class="fa-solid fa-paper-plane"></i></span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  <!-- FIM DASHBOARD CONTATO -->
+
+<!-- DASHBOARD PAGAMENTOS -->
+    <div class="popup" id="pagtos">
+      <div class="popup-container">
+        <div class="popup-header">
+          <div class="button-container">
+            <button class="close-btn circle-btn red">
+              <i class="fa fa-times"></i>
+            </button>
+            <button class="close-btn circle-btn yellow">
+              <i class="fa fa-window-minimize"></i>
+            </button>
+            <button class="maximize-btn circle-btn green">
+              <i class="fa fa-window-maximize"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="popup-body">
+          <div class="skill-list">
+            <h1 style="text-align: center;">Quanto a Pagamentos</h1>
+            <p style="text-align: justify;">
+              A forma de pagamento é simples e flexível. Para começarmos a trabalhar juntos, peço um sinal de <b>50,00€</b>, para poder iniciar o trabalho e demonstrar seu compromisso. O restante do pagamento nós podemos acertar de acordo com o que for mais conveniente e justo para ambos. Podemos discutir opções de pagamento que se adequem às suas possibilidades e garantir que o trabalho seja o mais transparente e tranquilo possível. Minha prioridade é te atender e proporcionar o resultado esperado.
+            </p><br>
+
+            <h1>Meios de Pagamento</h1>
+            <ul>
+              <li>Transferência Bancária</li>
+              <li><i class="fa fa-eur"> Euro</i></li>              
+              <li><i class="fa fa-dollar"> USDT</i></li>
+              <li><i class="fa fa-btc"></i> Bitcoin</li>
+              <!-- Adicione outras opções de pagamento, se necessário -->
+            </ul>
+          </div>
+
+  <div class="project-container">
+    <!-- FAQ Section -->
+    <h1 style="text-align: center;">Dúvidas Frequentes</h1>
+
+    <!-- Estimativa de Custos para Desenvolvimento Web -->
+    <div class="faq-item">
+      <button class="faq-question">Estimativa de Custos para Desenvolvimento Web <span class="arrow">&#9660;</span></button>
+      <div class="faq-answer">
+        <p style="text-align: justify;">O custo médio estimado para os serviços de desenvolvimento web varia de acordo com as necessidades do projeto. Abaixo estão os preços estimados para diferentes serviços:</p><br>
+        <h3>Front-end</h3>
+        <ul>
+          <li>Desenvolvimento de interfaces de usuário usando HTML, CSS e JavaScript: <b>52,00€</b> por página</li>
+          <li>Implementação de designs responsivos: <b>18,00€</b></li>
+          <li>Integração de frameworks e bibliotecas frontend:</li>
+          <ul>
+            <li>React.js: <b>85,00€</b></li>
+            <li>Angular.js: <b>70,00€</b></li>
+            <li>Vue.js: <b>75,00€</b></li>
+          </ul>
+        </ul><br>
+        <h3>Controle de Versão</h3>
+        <ul>
+          <li>Utilização de sistemas de controle de versão como Git: <b>35,00€</b> por projeto</li>
+          <li>Colaboração com outros desenvolvedores por meio de repositórios compartilhados: Incluso no preço do controle de versão</li>
+        </ul>
+        <p style="text-align: justify;">Esses preços são estimativas e podem variar dependendo da complexidade do projeto e dos requisitos específicos. Para obter um orçamento preciso, entre em contato conosco com os detalhes do seu projeto.</p><br>
+      </div>
+    </div>
+
+    <!-- Custo para consertar computador -->
+    <div class="faq-item">
+      <button class="faq-question">Quanto custa para consertar meu computador? <span class="arrow">&#9660;</span></button>
+      <div class="faq-answer">
+        <p>O custo médio estimado é de aproximadamente <b>85,00€</b>, mas pode variar de acordo com os serviços executados, tais como:</p>
+        <ul>
+          <li>Backup</li>
+          <li>Formatação</li>
+          <li>Remoção de Vírus</li>
+          <li>Troca de Peças</li>
+          <li>Hardware do Computador</li>
+        </ul>
+        <p style="text-align: justify;">Ao solicitar seu orçamento, seja detalhista ao descrever o que ocorre com o computador e, principalmente, as especificações (marca, modelo, sistema operacional, tempo de uso, etc).</p>
+        <p style="text-align: justify;">Estamos aqui para ajudá-lo com seus problemas de informática e garantir que seu dispositivo funcione da melhor forma possível.</p><br>
+      </div>
+    </div>
+
+    <!-- Formatação e Backup -->
+    <div class="faq-item">
+      <button class="faq-question">Formatação e Backup <span class="arrow">&#9660;</span></button>
+      <div class="faq-answer">
+        <p style="text-align: justify;">De acordo com o reparo, poderá ser necessário realizar a formatação do computador e, consequentemente, antes da formatação, é imprescindível realizar o backup para evitar a perda de arquivos importantes. Ambos os serviços são cobrados à parte, sendo:</p><br>
+        <ul>
+          <li>Backup (cópia dos documentos e arquivos que estão no computador): 7,00€ por GB</li>
+          <li>Formatação (Reinstalação completa do sistema operacional): 43,00€</li>
+        </ul><br>
+        <p style="text-align: justify;">Também é importante observar que se o diagnóstico for realizado a domicílio, será cobrada uma taxa de deslocamento de acordo com a distância.</p><br>
+      </div>
+    </div>
+
+    <!-- Designer Gráfico e Criativos -->
+    <div class="faq-item">
+      <button class="faq-question">Designer gráfico e criativos <span class="arrow">&#9660;</span></button>
+      <div class="faq-answer">
+        <ul>
+          <li>Logotipos personalizados: <b>43,00€</b>.</li>
+          <li>Imagens avulsas: <b>14,00€</b> por imagem.</li>
+          <li>Se você optar por um pacote de 10 imagens, o valor total é de <b>85,00€</b>, tornando cada imagem apenas <b>8,50€</b></li>
+        </ul>
+        <p>Estou à disposição para discutir seus projetos e garantir que você obtenha ótimos resultados visuais que se encaixem no seu orçamento.</p>
+      </div>
+    </div>
+    <!-- Procurement Técnico para Desenvolvimento Web -->
+    <div class="faq-item">
+      <button class="faq-question">Procurement Técnico na Área de Desenvolvimento Web <span class="arrow">&#9660;</span></button>
+      <div class="faq-answer">
+        <p style="text-align: justify;">Um procurement técnico para desenvolvimento web é essencial para garantir que todas as especificações técnicas, expectativas de qualidade e requisitos funcionais sejam claros e bem definidos antes de iniciar o projeto. Isso ajuda na seleção do fornecedor certo e no estabelecimento de um contrato que atende às necessidades do projeto. Vou organizar o procurement técnico em várias seções, incluindo os requisitos gerais, especificações técnicas, critérios de seleção e outros detalhes importantes.</p><br>
+
+        <h3>Descrição Geral do Projeto</h3>
+        <ul>
+          <li><strong>Objetivo do Projeto:</strong> Desenvolver um site responsivo e moderno para a empresa/cliente, com foco em no objetivo principal(e-commerce, portfólio, blog, etc.)</li>
+          <li><strong>Escopo: </strong>O site deverá incluir [número] páginas principais, incluindo [página inicial, sobre nós, serviços, contato, etc.]. Além disso, devem ser incluídos recursos como [integração com APIs, formulários de contato, sistema de gerenciamento de conteúdo (CMS), etc.].</li>
+          <li><strong>Público-Alvo: </strong>Descrever o público-alvo do site, como [clientes B2B, consumidores finais, etc.].</li>
+        </ul><br>
+
+        <h2>Requisitos Técnicos</h2>
+        <h3>Frontend:</h3>
+        <ul>
+          <li><strong>Linguagens:</strong> HTML5, CSS3, JavaScript (incluindo frameworks/libraries como React, Angular ou Vue.js).</li>
+          <li><strong>Design Responsivo:</strong>O site deve ser totalmente responsivo e funcionar em todos os dispositivos e navegadores modernos.</li>
+          <li><strong>Compatibilidade entre Navegadores:</strong> Suporte para os principais navegadores (Chrome, Firefox, Safari, Edge).</li>
+          <li><strong>Acessibilidade:</strong> Conformidade com as normas de acessibilidade web (WCAG 2.1).</li>
+        </ul><br>
+
+        <h3>Backend:</h3>
+        <ul>
+          <li><strong>Linguagens/Frameworks:</strong> Node.js, Python (Django/Flask), Ruby on Rails, PHP (Laravel), ou outros relevantes.</li>
+          <li><strong>Banco de Dados:</strong>SQL (MySQL, PostgreSQL) ou NoSQL (MongoDB).</li>
+          <li><strong>APIs:</strong> Desenvolvimento e integração de APIs RESTful ou GraphQL.</li>
+          <li><strong>Autenticação/Autorização:</strong> Implementação de sistemas de login seguro, incluindo OAuth2, JWT, etc.</li>
+        </ul><br>
+
+
+       <h3>Infraestrutura e Hospedagem:</h3>
+        <ul>
+          <li><strong>Serviços de Hospedagem:</strong> AWS, Google Cloud, Azure ou provedores equivalentes.</li>
+          <li><strong>Servidores:</strong> Escolha de servidores baseados em Linux ou Windows.</li>
+          <li><strong>Escalabilidade:</strong> A arquitetura deve suportar escalabilidade horizontal e vertical.</li>
+          <li><strong>Segurança:</strong> Implementação de práticas recomendadas de segurança (SSL/TLS, firewall, proteção contra DDoS).</li>
+        </ul><br>
+
+        <h3>Outras Considerações Técnicas:</h3>
+        <ul>
+          <li><strong>SEO:</strong> O site deve ser otimizado para motores de busca com as melhores práticas de SEO.</li>
+          <li><strong>Desempenho:</strong> O site deve carregar rapidamente, com um tempo de carregamento ideal inferior a 3 segundos.</li>
+          <li><strong>Gerenciamento de Conteúdo:</strong> Se necessário, integração com um CMS como WordPress, Joomla, ou CMSs headless.</li>
+          <li><strong>Testes:</strong> Devem ser realizados testes unitários, de integração, funcionais e de usabilidade.</li>
+        </ul><br>
+
+        <h3>Proposta Técnica: </h3>
+        <ul>
+          <li>Detalhamento da solução proposta, incluindo arquitetura, tecnologias e abordagens de desenvolvimento.</li>
+          <li>Cronograma detalhado do projeto, com marcos e entregas.</li>
+          <li>Composição da equipe que irá trabalhar no projeto, incluindo desenvolvedores, designers, gerentes de projeto, etc.</li>
+        </ul><br>
+
+        <h3>Custo:</h3>
+        <ul>
+          <li>Proposta de custo detalhada, incluindo todos os serviços e entregáveis.</li>
+          <li>Opções de pagamento (ex.: marcos de pagamento baseados na entrega de resultados).</li>
+          <li>Detalhes sobre suporte pós-lançamento e manutenção do site.</li>
+        </ul><br>
+
+        <h3>Termos e Condições</h3>
+        <ul>
+          <li><strong>Propriedade Intelectual:</strong> Especificar que todos os direitos sobre o código e design desenvolvido serão transferidos para o cliente.</li>
+          <li><strong>Confidencialidade:</strong> Acordo de confidencialidade para proteger informações sensíveis.</li>
+          <li><strong>Cronograma e Entregas:</strong> Definição clara de prazos e entregáveis.</li>
+          <li><strong>Garantias:</strong> Garantias sobre a qualidade do trabalho e a correção de defeitos após a entrega.</li>
+        </ul><br>
+
+        <h3>Documentação</h3>
+        <ul>
+          <li><strong>Especificações Funcionais:</strong> Documento detalhado de requisitos funcionais.</li>
+          <li><strong>Wireframes e Mockups:</strong> Desenhos iniciais do layout e estrutura do site.</li>
+          <li><strong>Documentação Técnica:</strong> Arquitetura, tecnologias, e design de banco de dados.Garantia de manutenção, atualizações e suporte de qualidade.</li>
+          <li><strong>Planos de Teste:</strong> Estratégias para testes de funcionalidade, desempenho, e segurança.</li>
+        </ul><br>
+
+        <h3>Resumindo o Procurement Técnico para Desenvolvimento Web </h3>
+          <ul>
+            <li><strong>Definição de Requisitos Técnicos:</strong> Identificação das necessidades do projeto, como linguagens de programação, frameworks, e infraestrutura necessária.</li>
+            <li><strong>Especificações Detalhadas:</strong> Documentação das especificações técnicas detalhadas para o projeto, incluindo desempenho, escalabilidade, e segurança.</li>
+            <li><strong>Criterios de Seleção:</strong> Estabelecimento de critérios para a escolha de fornecedores, como experiência, qualidade do portfólio, custo, e suporte pós-implementação.</li>
+            <li><strong>Termos e Condições:</strong> Definição clara dos termos contratuais, prazos de entrega, e condições de pagamento.</li>
+            <li><strong>Processo de Seleção:</strong> Estruturação de um processo de seleção que pode incluir RFPs (Request for Proposals), entrevistas, e testes de competência técnica.</li>
+            <li><strong>Gestão de Riscos:</strong> Identificação e mitigação de potenciais riscos técnicos, financeiros, ou de cronograma.</li>
+        </ul><br>
+
+
+        <p style="text-align: justify;">Um procurement técnico bem-executado assegura que o desenvolvimento web seja conduzido por profissionais que compreendem profundamente as necessidades do projeto e são capazes de entregá-lo com alta qualidade, dentro do prazo e orçamento estipulados.</p><br>
+      </div>
+    </div>
+<!-- Fim do Procurement Técnico para Desenvolvimento Web -->
+
+    <!-- Procurement Técnico na Área de Redes TIC -->
+    <div class="faq-item">
+      <button class="faq-question">Procurement Técnico na Área de Redes TIC <span class="arrow">&#9660;</span></button>
+      <div class="faq-answer">
+        <p style="text-align: justify;">O procurement técnico na área de redes de TIC envolve a aquisição de bens, serviços e tecnologias essenciais para a operação, manutenção e expansão das redes de comunicação e informação. É um processo especializado devido à complexidade dos produtos e serviços envolvidos.</p><br>
+
+        <h3>Identificação de Necessidades</h3>
+        <ul>
+          <li>Compreensão dos requisitos técnicos e operacionais.</li>
+          <li>Determinação das necessidades de infraestrutura como hardware e software de redes.</li>
+          <li>Exemplos: switches, roteadores, sistemas de gerenciamento de redes.</li>
+        </ul><br>
+
+        <h3>Especificação Técnica</h3>
+        <ul>
+          <li>Desenvolvimento de especificações detalhadas.</li>
+          <li>Definição de padrões técnicos, funcionalidades e capacidades necessárias.</li>
+          <li>Exigência de compatibilidade e integração com sistemas existentes.</li>
+        </ul><br>
+
+        <h3>Seleção de Fornecedores</h3>
+        <ul>
+          <li>Avaliação técnica das propostas.</li>
+          <li>Consideração de confiabilidade, suporte ao cliente e custo-benefício.</li>
+          <li>Testes de conceito e demonstrações práticas para garantir o atendimento aos requisitos.</li>
+        </ul><br>
+
+        <h3>Negociação e Contratação</h3>
+        <ul>
+          <li>Negociação além do preço, incluindo SLAs, suporte técnico e garantias.</li>
+          <li>Conformidade com normas de segurança de dados e privacidade.</li>
+          <li>Inclusão de cláusulas contratuais para mitigação de riscos.</li>
+        </ul><br>
+
+        <h3>Gestão de Riscos</h3>
+        <ul>
+          <li>Identificação e mitigação de riscos associados à aquisição e implementação.</li>
+          <li>Consideração de riscos de segurança cibernética e continuidade do negócio.</li>
+          <li>Proteção contratual contra falhas de entrega ou defeitos de produtos.</li>
+        </ul><br>
+
+        <h3>Implementação e Integração</h3>
+        <ul>
+          <li>Integração dos novos sistemas com a infraestrutura existente.</li>
+          <li>Planejamento de transição e realização de testes exaustivos.</li>
+          <li>Garantia de suporte técnico contínuo durante a integração.</li>
+        </ul><br>
+
+        <h3>Gestão de Relacionamento com Fornecedores</h3>
+        <ul>
+          <li>Gestão contínua do relacionamento para suporte pós-compra.</li>
+          <li>Avaliação do desempenho dos fornecedores e renegociação de contratos conforme necessário.</li>
+          <li>Garantia de manutenção, atualizações e suporte de qualidade.</li>
+        </ul><br>
+
+        <h3>Avaliação Pós-Implementação</h3>
+        <ul>
+          <li>Verificação do cumprimento dos objetivos do projeto.</li>
+          <li>Análise de desempenho da rede e cumprimento dos SLAs.</li>
+          <li>Utilização do feedback para melhorar futuras aquisições e implementações.</li>
+        </ul><br>
+
+        <h2>Exemplos de Itens e Serviços Envolvidos</h2><br>
+        <ul>
+          <li>Hardware: Roteadores, switches, firewalls, servidores.</li>
+          <li>Software: Sistemas de gerenciamento de redes, VPNs, software de monitoramento.</li>
+          <li>Serviços: Consultoria em TIC, instalação, configuração, segurança cibernética.</li>
+        </ul><br>
+
+        <p style="text-align: justify;">O procurement técnico em redes de TIC é essencial para garantir que as organizações obtenham soluções seguras, escaláveis e alinhadas com seus objetivos de negócios.</p><br>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+        <!-- FIM DASHBOARD FAQ -->
+      </div>
+    </div>
+  <!-- FIM DASHBOARD PAGAMENTOS -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+        <script>
+  document.getElementById('more-btn').addEventListener('click', function() {
+    window.open('https://drinkdrips.github.io', '_blank');
+  });
+</script>
+
+<script>
+// JavaScript to handle FAQ toggle
+const faqItems = document.querySelectorAll('.faq-item');
+
+faqItems.forEach(item => {
+  const question = item.querySelector('.faq-question');
+  question.addEventListener('click', () => {
+    const answer = item.querySelector('.faq-answer');
+    const arrow = item.querySelector('.arrow');
+    answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+    arrow.innerHTML = answer.style.display === 'block' ? '&#9650;' : '&#9660;';
+  });
+});
+</script>
+
+  </body>
+  <script src="script.js"></script>
+  </html>
