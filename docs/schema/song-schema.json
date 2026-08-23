@@ -1,0 +1,28 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "id": { "type": "string" },
+    "title": { "type": "string" },
+    "artist": { "type": "string" },
+    "level": { "type": ["string","null"] },
+    "duration": { "type": ["number","null"] },
+    "lines": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "line_id": { "type": "string" },
+          "text": { "type": "string" },
+          "ipa": { "type": ["string", "null"] },
+          "chords": { "type": ["string", "array", "null"] },
+          "time_start": { "type": ["number", "null"] },
+          "time_end": { "type": ["number", "null"] },
+          "grammar_notes": { "type": ["string", "null"] }
+        },
+        "required": ["line_id","text"]
+      }
+    }
+  },
+  "required": ["id","title","lines"]
+}
