@@ -24,7 +24,14 @@ let count = 0
 for (const s of songsIndex) {
   const id = s.id || s.file || ''
   if (!id) continue
-  const songPath = path.join(dataDir, `${id}.json`)
+  // allow songs.json to point to a data file via s.data, or try common patterns
+  let songPath = ''
+  if (s.data) {
+    songPath = path.isAbsolute(s.data) ? s.data : path.join(__dirname, '..', s.data)
+  } else {
+    const candidates = [path.join(dataDir, `${id}.json`), path.join(dataDir, `song-${id}.json`)]
+    songPath = candidates.find(p => fs.existsSync(p)) || candidates[0]
+  }
   if (!fs.existsSync(songPath)) {
     console.warn('Missing song file for', id, 'expected at', songPath)
     continue
