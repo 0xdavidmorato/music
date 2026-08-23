@@ -4,6 +4,7 @@ Generate static post pages under posts/<slug>.html from content/posts/*.md
 """
 from pathlib import Path
 import re
+import json
 
 posts_dir = Path('content/posts')
 if not posts_dir.exists():
@@ -43,9 +44,12 @@ for md in posts_dir.glob('*.md'):
 
 # generate posts index
 index_html = '<!doctype html>\n<html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Blog</title>\n<link rel="stylesheet" href="/assets/music_styles.css">\n</head><body><main><h1>Blog</h1>\n'
+posts_json = []
 for p in sorted(posts_index, key=lambda x: x.get('date',''), reverse=True):
     index_html += f"<article><h3><a href='/posts/{p['slug']}.html'>{p['title']}</a></h3><time>{p.get('date','')}</time></article>\n"
+    posts_json.append({'slug': p['slug'], 'title': p['title'], 'date': p.get('date','')})
 index_html += '</main>\n</body></html>'
 
 (Path('posts') / 'index.html').write_text(index_html, encoding='utf-8')
-print('Wrote posts/index.html')
+(Path('posts') / 'index.json').write_text(json.dumps(posts_json, ensure_ascii=False, indent=2), encoding='utf-8')
+print('Wrote posts/index.html and posts/index.json')
