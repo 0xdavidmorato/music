@@ -1,0 +1,43 @@
+name: Validate JSON
+
+on:
+  pull_request:
+  push:
+    branches: [ main ]
+
+jobs:
+  validate-json:
+    name: Validate JSON schemas
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+      - name: Install ajv-cli
+        run: npm install -g ajv-cli
+      - name: Validate ipa.json
+        run: |
+          set -e
+          if [ -f data/ipa.json ]; then
+            ajv validate -s docs/schema/ipa-schema.json -d data/ipa.json
+            echo "ipa.json OK"
+          else
+            echo "ipa.json not found, skipping"
+          fi
+      - name: Validate song JSONs
+        run: |
+          set -e
+          shopt -s nullglob
+          files=(data/song-*.json)
+          if [ ${#files[@]} -eq 0 ]; then
+            echo "No song files found to validate"
+            exit 0
+          fi
+          for f in "${files[@]}"; do
+            echo "Validating $f"
+            ajv validate -s docs/schema/song-schema.json -d "$f"
+          done
+          echo "All song JSONs validated"
