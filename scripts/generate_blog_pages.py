@@ -13,6 +13,7 @@ if not posts_dir.exists():
 out_dir = Path('posts')
 out_dir.mkdir(exist_ok=True)
 
+posts_index = []
 for md in posts_dir.glob('*.md'):
     text = md.read_text(encoding='utf-8')
     m = re.match(r'^---\n(.*?)\n---\n(.*)$', text, flags=re.S)
@@ -26,6 +27,10 @@ for md in posts_dir.glob('*.md'):
                 k,v = line.split(':',1)
                 meta[k.strip()] = v.strip()
     slug = md.stem
+    title = meta.get('title','Post')
+    date = meta.get('date','')
+    posts_index.append({'slug':slug,'title':title,'date':date})
+
     html = f'''<!doctype html>
 <html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{meta.get('title','Post')}</title>
 <link rel="stylesheet" href="/assets/music_styles.css">
@@ -35,3 +40,12 @@ for md in posts_dir.glob('*.md'):
     out_path = out_dir / (slug+'.html')
     out_path.write_text(html, encoding='utf-8')
     print('Wrote', out_path)
+
+# generate posts index
+index_html = '<!doctype html>\n<html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Blog</title>\n<link rel="stylesheet" href="/assets/music_styles.css">\n</head><body><main><h1>Blog</h1>\n'
+for p in sorted(posts_index, key=lambda x: x.get('date',''), reverse=True):
+    index_html += f"<article><h3><a href='/posts/{p['slug']}.html'>{p['title']}</a></h3><time>{p.get('date','')}</time></article>\n"
+index_html += '</main>\n</body></html>'
+
+(Path('posts') / 'index.html').write_text(index_html, encoding='utf-8')
+print('Wrote posts/index.html')
