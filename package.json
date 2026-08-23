@@ -1,0 +1,13 @@
+{
+  "name": "music-data",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "validate": "node scripts/validate.js",
+    "prepare": "husky install"
+  },
+  "devDependencies": {
+    "ajv": "^8.12.0",
+    "husky": "^8.0.0"
+  }
+}
