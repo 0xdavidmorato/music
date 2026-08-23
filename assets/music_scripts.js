@@ -181,10 +181,26 @@ lyricsContainers.forEach((lyrics) => {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-  // Transformar conteúdo de <span class="ipa"> em letras minúsculas
-  document.querySelectorAll('span.ipa').forEach(span => {
-    span.textContent = span.textContent.toLowerCase();
-  });
+  // Carregar mapeamento IPA a partir de data/ipa.json e injetar nos spans com data-ipa-id
+  fetch('data/ipa.json')
+    .then(res => res.ok ? res.json() : {})
+    .then(map => {
+      document.querySelectorAll('span.ipa').forEach(span => {
+        const id = span.dataset.ipaId;
+        if (id && map[id]) {
+          span.textContent = map[id].toLowerCase();
+        } else {
+          // fallback: mantém qualquer texto inline (ou vazio)
+          span.textContent = span.textContent.toLowerCase();
+        }
+      });
+    })
+    .catch(err => {
+      console.error('Failed to load IPA mapping', err);
+      document.querySelectorAll('span.ipa').forEach(span => {
+        span.textContent = span.textContent.toLowerCase();
+      });
+    });
 
   // Remover todas as tags <br>
   document.querySelectorAll('br').forEach(br => br.remove());
