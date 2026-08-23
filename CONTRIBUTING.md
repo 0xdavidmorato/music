@@ -45,4 +45,16 @@ Thank you for contributing. This repository intentionally contains only the song
 
 - This repo includes a GitHub Action that validates JSONs on each PR. Ensure the checks pass before merging.
 
+7) Editing workflow with the Export + CLI tool
+
+- Use the in-browser IPA editor to make local edits to a song (the UI updates the in-memory model).
+- Click "Exportar JSON" to download the updated song JSON to your machine.
+- Use the included CLI to create a draft PR from the exported file:
+
+  cd <repo-root>
+  npm run create-pr-from-file -- --file /abs/path/to/song-viva-la-vida.json --branch "autosave/viva-<ts>" --title "Update viva la vida IPA" --body "Atualização de IPA"
+
+- The CLI will copy the file into data/, create a branch, commit, push and open a draft PR for review.
+- After PR review and CI green, merge into main.
+
 Thank you — keep IPAs safe! 

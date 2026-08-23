@@ -167,6 +167,31 @@ function renderSong(song: any, ipaMap: Record<string, string>) {
       // initial check
       audio.addEventListener('play', updateHighlight)
     }
+
+    // Export button: download the currently loaded song JSON (as edited in-memory)
+    const exportBtn = document.createElement('button')
+    exportBtn.className = 'export-json-btn'
+    exportBtn.textContent = 'Exportar JSON'
+    exportBtn.addEventListener('click', () => {
+      try {
+        // attempt to build a filename from song.id or fallback
+        const fname = (song && (song.id || song.file)) ? `${song.id || song.file}.json` : `song-export-${Date.now()}.json`
+        const blob = new Blob([JSON.stringify(song, null, 2)], { type: 'application/json' })
+        const url = URL.createObjectURL(blob)
+        const a = document.createElement('a')
+        a.href = url
+        a.download = fname
+        document.body.appendChild(a)
+        a.click()
+        a.remove()
+        URL.revokeObjectURL(url)
+      } catch (err) {
+        console.error('Export failed', err)
+        alert('Falha ao exportar JSON. Veja o console para detalhes.')
+      }
+    })
+
+    controlsEl.appendChild(exportBtn)
   } else {
     lyricsEl.innerHTML = '<p>No lines found in song file.</p>'
   }
