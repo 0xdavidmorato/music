@@ -16,6 +16,8 @@
     .line-text{font-size:1.1rem}
     .line-ipa{color:#007700;font-family:monospace}
     .line-chords{color:#333;font-weight:600}
+    /* current highlight for active line */
+    li.song-line.current{background:linear-gradient(90deg,rgba(255,245,200,0.6),rgba(255,250,230,0.6));}
   </style>
 </head>
 <body>
@@ -75,5 +77,45 @@
     </ol>
     <footer style="margin-top:20px;color:#888">Gerado automaticamente — mantenha IPAs em data/ipa.json</footer>
   </div>
+
+  <script>
+  // Inline player highlight script: reads data-start/data-end attributes on .song-line elements
+  (function(){
+    const audio = document.querySelector('audio')
+    if(!audio) return
+    const lines = Array.from(document.querySelectorAll('li.song-line'))
+    // parse start/end from data attributes on child elements if present
+    const entries = lines.map((li,i)=>{
+      const startAttr = li.getAttribute('data-start')
+      const endAttr = li.getAttribute('data-end')
+      const start = startAttr ? Number(startAttr) : undefined
+      const end = endAttr ? Number(endAttr) : undefined
+      return { li, start, end }
+    })
+
+    function update(){
+      const t = audio.currentTime
+      let found = -1
+      for(let i=0;i<entries.length;i++){
+        const e = entries[i]
+        if(e.start!=null && e.end!=null){
+          if(t>=e.start && t<=e.end){ found = i; break }
+        } else if(e.start!=null && e.end==null){
+          const next = entries[i+1]
+          const nextStart = next && next.start!=null ? next.start : Infinity
+          if(t>=e.start && t<nextStart){ found = i; break }
+        }
+      }
+      entries.forEach((e,idx)=>{
+        if(idx===found) e.li.classList.add('current')
+        else e.li.classList.remove('current')
+      })
+    }
+
+    audio.addEventListener('timeupdate', update)
+    audio.addEventListener('seeked', update)
+    audio.addEventListener('play', update)
+  })()
+  </script>
 </body>
 </html>
