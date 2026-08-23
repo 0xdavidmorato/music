@@ -202,6 +202,22 @@ function renderSong(song: any, ipaMap: Record<string, string>) {
       const branch = `autosave/${fname.replace(/\W+/g,'-')}-${Date.now()}`
       const title = `Update data: ${fname}`
       const body = `Atualização via editor de IPA`
+
+      // Basic validation: ensure at least one IPA exists, and JSON is well-formed
+      try {
+        if (!song || typeof song !== 'object') throw new Error('Song data missing or invalid')
+        if (!Array.isArray(song.lines)) throw new Error('Song has no lines')
+        const nonEmptyIpas = song.lines.filter((l:any)=> (l.ipa && String(l.ipa).trim().length>0))
+        if (nonEmptyIpas.length === 0) {
+          // proceed but warn
+          const proceed = confirm('Nenhuma linha tem IPA preenchido. Deseja continuar e criar o PR mesmo assim?')
+          if (!proceed) return
+        }
+      } catch (e) {
+        alert('Validação básica falhou: ' + e.message)
+        return
+      }
+
       try {
         const resp = await fetch('http://127.0.0.1:8787/create-pr', {
           method: 'POST',
@@ -214,7 +230,10 @@ function renderSong(song: any, ipaMap: Record<string, string>) {
           alert('Falha ao criar PR: ' + (json.error || JSON.stringify(json)))
           return
         }
-        alert('PR criado (rascunho). Verifique console para detalhes. URL: ' + (json.prUrl || 'ver console'))
+        const prUrl = json.prUrl || 'ver console'
+        // show link and copy to clipboard
+        try { await navigator.clipboard.writeText(prUrl) } catch (_) {}
+        alert('PR criado (rascunho). URL copiada para clipboard: ' + prUrl)
         console.log('PR server response', json)
       } catch (err) {
         console.error('Failed to call PR server', err)
