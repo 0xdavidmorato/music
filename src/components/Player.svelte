@@ -15,6 +15,25 @@
   function onEnded(){
     dispatch('ended')
   }
+
+  function onLoaded(){
+    if (!audioEl) return
+    dispatch('loaded', { duration: audioEl.duration })
+  }
+
+  // expose a seek method so parent components can call playerRef.seek(time)
+  export function seek(time){
+    if (!audioEl) return
+    audioEl.currentTime = time
+  }
+
+  export function getCurrentTime(){
+    return audioEl ? audioEl.currentTime : 0
+  }
+
+  export function getDuration(){
+    return audioEl ? audioEl.duration : 0
+  }
 </script>
 
 {#if song}
