@@ -1,0 +1,12 @@
+[
+  {
+    "id": "viva-la-vida",
+    "title": "Viva la Vida",
+    "artist": "Coldplay",
+    "data": "data/song-viva-la-vida.json",
+    "audio": "assets/audio/viva-la-vida.mp3",
+    "thumbnail": "assets/img/viva-la-vida.jpg",
+    "level": "intermediate",
+    "tags": ["rock","classic","coldplay" ]
+  }
+]
