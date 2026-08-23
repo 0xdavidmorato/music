@@ -5,7 +5,8 @@
   "scripts": {
     "validate": "node scripts/validate.js",
     "prepare": "husky install",
-    "create-pr-from-file": "node scripts/create-pr-from-file.js"
+    "create-pr-from-file": "node scripts/create-pr-from-file.js",
+    "generate-song-pages": "node scripts/generate-song-pages.js"
   },
   "devDependencies": {
     "ajv": "^8.12.0",
