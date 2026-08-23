@@ -192,6 +192,36 @@ function renderSong(song: any, ipaMap: Record<string, string>) {
     })
 
     controlsEl.appendChild(exportBtn)
+
+    // Save directly as PR via local server (requires server/create-pr-server.js running and gh auth)
+    const savePrBtn = document.createElement('button')
+    savePrBtn.className = 'save-pr-btn'
+    savePrBtn.textContent = 'Salvar (PR)'
+    savePrBtn.addEventListener('click', async () => {
+      const fname = (song && (song.id || song.file)) ? `${song.id || song.file}.json` : `song-export-${Date.now()}.json`
+      const branch = `autosave/${fname.replace(/\W+/g,'-')}-${Date.now()}`
+      const title = `Update data: ${fname}`
+      const body = `Atualização via editor de IPA`
+      try {
+        const resp = await fetch('http://127.0.0.1:8787/create-pr', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ fileName: fname, branch, title, body, file: song })
+        })
+        const json = await resp.json()
+        if (!resp.ok) {
+          console.error('PR server error', json)
+          alert('Falha ao criar PR: ' + (json.error || JSON.stringify(json)))
+          return
+        }
+        alert('PR criado (rascunho). Verifique console para detalhes. URL: ' + (json.prUrl || 'ver console'))
+        console.log('PR server response', json)
+      } catch (err) {
+        console.error('Failed to call PR server', err)
+        alert('Falha ao contactar o servidor local. Inicie `node server/create-pr-server.js` e tente novamente.')
+      }
+    })
+    controlsEl.appendChild(savePrBtn)
   } else {
     lyricsEl.innerHTML = '<p>No lines found in song file.</p>'
   }
