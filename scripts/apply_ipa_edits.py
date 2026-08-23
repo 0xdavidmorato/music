@@ -61,9 +61,11 @@ def main():
         if idx < 0 or idx >= len(song['lines']):
             print(f'Skipping out-of-range index {idx}')
             continue
-        # update text and ipa
+        # update text, ipa and chords
         song['lines'][idx]['text'] = item.get('text', song['lines'][idx]['text'])
         song['lines'][idx]['ipa'] = item.get('ipa', song['lines'][idx].get('ipa',''))
+        if 'chords' in item:
+            song['lines'][idx]['chords'] = item.get('chords','')
 
     # Prepare branch
     ts = datetime.utcnow().strftime('%Y%m%d%H%M%S')

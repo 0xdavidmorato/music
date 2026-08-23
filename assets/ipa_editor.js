@@ -43,7 +43,8 @@
         const idx = el.dataset.index;
         const orig = el.querySelector('.original')?.textContent || '';
         const ipa = el.querySelector('.ipa')?.textContent || '';
-        lines.push({index: parseInt(idx,10), text: orig, ipa});
+        const chords = el.querySelector('.chords')?.textContent || '';
+        lines.push({index: parseInt(idx,10), text: orig, ipa, chords});
       });
       const payload = {id: songId, lines};
       const blob = new Blob([JSON.stringify(payload, null, 2)], {type: 'application/json'});
