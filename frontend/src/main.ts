@@ -30,7 +30,7 @@ const controlsEl = document.getElementById('player-controls')!
 
 async function loadSongsIndex() {
   try {
-    const r = await fetch('/data/songs.json')
+    const r = await fetch('data/songs.json')
     const list: SongIndex[] = await r.json()
     renderSongs(list)
   } catch (err) {
@@ -61,13 +61,13 @@ async function openSong(s: SongIndex) {
   controlsEl.innerHTML = ''
 
   try {
-    const r = await fetch(`/data/${s.file ?? s.id}.json`)
+    const r = await fetch(`data/${s.file ?? s.id}.json`)
     const song = await r.json()
 
     // try to load IPA map as well
     let ipaMap: Record<string, string> = {}
     try {
-      const ri = await fetch('/data/ipa.json')
+      const ri = await fetch('data/ipa.json')
       ipaMap = await ri.json()
     } catch (_) {
       // ipa.json missing is not fatal in dev
