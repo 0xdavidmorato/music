@@ -1,0 +1,445 @@
+{
+  "id": "viva-la-vida",
+  "title": "Viva la Vida",
+  "artist": "Coldplay",
+  "source": "index.html.bak",
+  "audio": "assets/audio/viva-la-vida.mp3",
+  "thumbnail": "assets/img/viva-la-vida.jpg",
+  "lines": [
+    {
+      "line_id": "l001",
+      "text": "I used to rule the world",
+      "ipa": "ái iústu rúl dã uãrld",
+      "chords": "",
+      "time_start": null,
+      "time_end": null,
+      "grammar_notes": []
+    },
+    {
+      "line_id": "l002",
+      "text": "Seas would rise when I gave the word",
+      "ipa": "sís uúd ráiz uén ái gêiv dã uãrd",
+      "chords": "",
+      "time_start": null,
+      "time_end": null,
+      "grammar_notes": []
+    },
+    {
+      "line_id": "l003",
+      "text": "Now in the morning I sleep alone",
+      "ipa": "náu in dã mórnin ái slíp ãlôun",
+      "chords": "",
+      "time_start": null,
+      "time_end": null,
+      "grammar_notes": []
+    },
+    {
+      "line_id": "l004",
+      "text": "Sweep the streets I used to own",
+      "ipa": "suíp dã stríts ái iústu ôun",
+      "chords": "",
+      "time_start": null,
+      "time_end": null,
+      "grammar_notes": []
+    },
+    {
+      "line_id": "l005",
+      "text": "I used to roll the dice",
+      "ipa": "ái iústu rôul dã dáis",
+      "chords": "",
+      "time_start": null,
+      "time_end": null,
+      "grammar_notes": []
+    },
+    {
+      "line_id": "l006",
+      "text": "Feel the fear in my enemies' eyes",
+      "ipa": "fíl dã fír in mái énãmiz áiz",
+      "chords": "",
+      "time_start": null,
+      "time_end": null,
+      "grammar_notes": []
+    },
+    {
+      "line_id": "l007",
+      "text": "Listen as the crowd would sing",
+      "ipa": "lísãn éz dã cráud uúd síng",
+      "chords": "",
+      "time_start": null,
+      "time_end": null,
+      "grammar_notes": []
+    },
+    {
+      "line_id": "l008",
+      "text": "Now the old king is dead, long live the king",
+      "ipa": "náu dã ôuld kíng iz déd, lòng lív dã kíng",
+      "chords": "",
+      "time_start": null,
+      "time_end": null,
+      "grammar_notes": []
+    },
+    {
+      "line_id": "l009",
+      "text": "One minute I held the key",
+      "ipa": "uãn mínãt ái réld dã kí",
+      "chords": "",
+      "time_start": null,
+      "time_end": null,
+      "grammar_notes": []
+    },
+    {
+      "line_id": "l010",
+      "text": "Next the walls were closed on me",
+      "ipa": "nékst dã uóls uãr clôuzd ón mi",
+      "chords": "",
+      "time_start": null,
+      "time_end": null,
+      "grammar_notes": []
+    },
+    {
+      "line_id": "l011",
+      "text": "And I discovered that my castles stand",
+      "ipa": "énd ái discãvãrd dét mái kástãls sténd",
+      "chords": "",
+      "time_start": null,
+      "time_end": null,
+      "grammar_notes": []
+    },
+    {
+      "line_id": "l012",
+      "text": "Upon pillars of salt and pillars of sand",
+      "ipa": "ãpón pílãrs óv sólt énd pílãrs óv sénd",
+      "chords": "",
+      "time_start": null,
+      "time_end": null,
+      "grammar_notes": []
+    },
+    {
+      "line_id": "l013",
+      "text": "Refrão:",
+      "ipa": "",
+      "chords": "",
+      "is_header": true,
+      "time_start": null,
+      "time_end": null,
+      "grammar_notes": []
+    },
+    {
+      "line_id": "l014",
+      "text": "I hear Jerusalem bells a-ringing",
+      "ipa": "ái rír djãrúsãlém béls ã rínguin",
+      "chords": "",
+      "time_start": null,
+      "time_end": null,
+      "grammar_notes": []
+    },
+    {
+      "line_id": "l015",
+      "text": "Roman cavalry choirs are singing",
+      "ipa": "rôumãn kévãlri kuáiãrs ár sínguin",
+      "chords": "",
+      "time_start": null,
+      "time_end": null,
+      "grammar_notes": []
+    },
+    {
+      "line_id": "l016",
+      "text": "Be my mirror, my sword and shield",
+      "ipa": "bi mái mírãr, mái sôrd énd shíld",
+      "chords": "",
+      "time_start": null,
+      "time_end": null,
+      "grammar_notes": []
+    },
+    {
+      "line_id": "l017",
+      "text": "My missionaries in a foreign field",
+      "ipa": "mái míshãnériz in ã fórãn fíld",
+      "chords": "",
+      "time_start": null,
+      "time_end": null,
+      "grammar_notes": []
+    },
+    {
+      "line_id": "l018",
+      "text": "For some reason I can't explain",
+      "ipa": "fór sãm rízãn ái ként expléin",
+      "chords": "",
+      "time_start": null,
+      "time_end": null,
+      "grammar_notes": []
+    },
+    {
+      "line_id": "l019",
+      "text": "Once you'd gone there was never",
+      "ipa": "uãns iu'd gón dér uóz névãr",
+      "chords": "",
+      "time_start": null,
+      "time_end": null,
+      "grammar_notes": []
+    },
+    {
+      "line_id": "l020",
+      "text": "Never an honest word",
+      "ipa": "névãr ãn ónést uãrd",
+      "chords": "",
+      "time_start": null,
+      "time_end": null,
+      "grammar_notes": []
+    },
+    {
+      "line_id": "l021",
+      "text": "And that was when I ruled the world",
+      "ipa": "énd dét uóz uén ái rúld dã uãrld",
+      "chords": "",
+      "time_start": null,
+      "time_end": null,
+      "grammar_notes": []
+    },
+    {
+      "line_id": "l022",
+      "text": "It was a wicked and wild wind",
+      "ipa": "it uóz ã uíkéd énd uáild uínd",
+      "chords": "",
+      "time_start": null,
+      "time_end": null,
+      "grammar_notes": []
+    },
+    {
+      "line_id": "l023",
+      "text": "Blew down the doors to let me in",
+      "ipa": "blú dáun dã dórs tu lét mi in",
+      "chords": "",
+      "time_start": null,
+      "time_end": null,
+      "grammar_notes": []
+    },
+    {
+      "line_id": "l024",
+      "text": "Shattered windows and the sound of drums",
+      "ipa": "shétãrduíndôuz énd dã sáund óv drãms",
+      "chords": "",
+      "time_start": null,
+      "time_end": null,
+      "grammar_notes": []
+    },
+    {
+      "line_id": "l025",
+      "text": "People couldn't believe what I'd become",
+      "ipa": "pípãl cúdãnt bilív uát áid bicãm",
+      "chords": "",
+      "time_start": null,
+      "time_end": null,
+      "grammar_notes": []
+    },
+    {
+      "line_id": "l026",
+      "text": "Revolutionaries wait",
+      "ipa": "révãlúshãnériz uêit",
+      "chords": "",
+      "time_start": null,
+      "time_end": null,
+      "grammar_notes": []
+    },
+    {
+      "line_id": "l027",
+      "text": "For my head on a silver plate",
+      "ipa": "fór mái réd ón ã sílvãr plêit",
+      "chords": "",
+      "time_start": null,
+      "time_end": null,
+      "grammar_notes": []
+    },
+    {
+      "line_id": "l028",
+      "text": "Just a puppet on a lonely string",
+      "ipa": "djãst ã pãpét ón ã lôunli stríng",
+      "chords": "",
+      "time_start": null,
+      "time_end": null,
+      "grammar_notes": []
+    },
+    {
+      "line_id": "l029",
+      "text": "Oh who would ever want to be king?",
+      "ipa": "ôu rú uúd évãr uãnt tu bi kíng?",
+      "chords": "",
+      "time_start": null,
+      "time_end": null,
+      "grammar_notes": []
+    },
+    {
+      "line_id": "l030",
+      "text": "Refrão:",
+      "ipa": "",
+      "chords": "",
+      "is_header": true,
+      "time_start": null,
+      "time_end": null,
+      "grammar_notes": []
+    },
+    {
+      "line_id": "l031",
+      "text": "I hear Jerusalem bells a-ringing",
+      "ipa": "ái rír djãrúsãlém béls ã rínguin",
+      "chords": "",
+      "time_start": null,
+      "time_end": null,
+      "grammar_notes": []
+    },
+    {
+      "line_id": "l032",
+      "text": "Roman cavalry choirs are singing",
+      "ipa": "rôumãn kévãlri kuáiãrs ár sínguin",
+      "chords": "",
+      "time_start": null,
+      "time_end": null,
+      "grammar_notes": []
+    },
+    {
+      "line_id": "l033",
+      "text": "Be my mirror, my sword and shield",
+      "ipa": "bi mái mírãr, mái sôrd énd shíld",
+      "chords": "",
+      "time_start": null,
+      "time_end": null,
+      "grammar_notes": []
+    },
+    {
+      "line_id": "l034",
+      "text": "My missionaries in a foreign field",
+      "ipa": "mái míshãnériz in ã fórãn fíld",
+      "chords": "",
+      "time_start": null,
+      "time_end": null,
+      "grammar_notes": []
+    },
+    {
+      "line_id": "l035",
+      "text": "For some reason I can't explain",
+      "ipa": "fór sãm rízãn ái ként expléin",
+      "chords": "",
+      "time_start": null,
+      "time_end": null,
+      "grammar_notes": []
+    },
+    {
+      "line_id": "l036",
+      "text": "I know Saint Peter won't call my name",
+      "ipa": "ái nôu sêint pítãr uôunt cól mái néim",
+      "chords": "",
+      "time_start": null,
+      "time_end": null,
+      "grammar_notes": []
+    },
+    {
+      "line_id": "l037",
+      "text": "Never an honest word",
+      "ipa": "névãr ãn ónést uãrd",
+      "chords": "",
+      "time_start": null,
+      "time_end": null,
+      "grammar_notes": []
+    },
+    {
+      "line_id": "l038",
+      "text": "But that was when I ruled the world",
+      "ipa": "bãt dét uóz uén ái rúld dã uãrld",
+      "chords": "",
+      "time_start": null,
+      "time_end": null,
+      "grammar_notes": []
+    },
+    {
+      "line_id": "l039",
+      "text": "Oh oh oh oh oh oh",
+      "ipa": "ôu ôu ôu ôu ôu ôu",
+      "chords": "",
+      "time_start": null,
+      "time_end": null,
+      "grammar_notes": []
+    },
+    {
+      "line_id": "l040",
+      "text": "Oh oh oh oh oh oh",
+      "ipa": "ôu ôu ôu ôu ôu ôu",
+      "chords": "",
+      "time_start": null,
+      "time_end": null,
+      "grammar_notes": []
+    },
+    {
+      "line_id": "l041",
+      "text": "Oh oh oh oh oh oh",
+      "ipa": "ôu ôu ôu ôu ôu ôu",
+      "chords": "",
+      "time_start": null,
+      "time_end": null,
+      "grammar_notes": []
+    },
+    {
+      "line_id": "l042",
+      "text": "Refrão Final:",
+      "ipa": "",
+      "chords": "",
+      "is_header": true,
+      "time_start": null,
+      "time_end": null,
+      "grammar_notes": []
+    },
+    {
+      "line_id": "l043",
+      "text": "Hear Jerusalem bells a-ringing",
+      "ipa": "rír djãrúsãlém béls ã rínguin",
+      "chords": "",
+      "time_start": null,
+      "time_end": null,
+      "grammar_notes": []
+    },
+    {
+      "line_id": "l044",
+      "text": "Roman cavalry choirs are singing",
+      "ipa": "rôumãn kévãlri kuáiãrs ár sínguin",
+      "chords": "",
+      "time_start": null,
+      "time_end": null,
+      "grammar_notes": []
+    },
+    {
+      "line_id": "l045",
+      "text": "Be my mirror, my sword and shield",
+      "ipa": "bi mái mírãr, mái sôrd énd shíld",
+      "chords": "",
+      "time_start": null,
+      "time_end": null,
+      "grammar_notes": []
+    },
+    {
+      "line_id": "l046",
+      "text": "My missionaries in a foreign field",
+      "ipa": "mái míshãnériz in ã fórãn fíld",
+      "chords": "",
+      "time_start": null,
+      "time_end": null,
+      "grammar_notes": []
+    },
+    {
+      "line_id": "l047",
+      "text": "For some reason I can't explain",
+      "ipa": "fór sãm rízãn ái ként expléin",
+      "chords": "",
+      "time_start": null,
+      "time_end": null,
+      "grammar_notes": []
+    },
+    {
+      "line_id": "l048",
+      "text": "I know Saint Peter won't call my name",
+      "ipa": "ái nôu sêint p...",
+      "chords": "",
+      "time_start": null,
+      "time_end": null,
+      "grammar_notes": []
+    }
+  ]
+}

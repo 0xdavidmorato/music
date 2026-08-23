@@ -1,0 +1,18 @@
+/* Minimal karaoke styles */
+.karaoke-controls {
+  display:flex;
+  align-items:center;
+  gap:8px;
+  margin-bottom:12px;
+}
+.karaoke-controls button, .karaoke-controls input[type=range] {
+  background: rgba(255,255,255,0.04);
+  color: #e8eefc;
+  border: 1px solid rgba(255,255,255,0.06);
+  padding:6px 8px;
+  border-radius:6px;
+}
+.lyrics .line { padding:6px 4px; transition: background .25s ease; }
+.lyrics .line.current { background: rgba(255,255,255,0.03); border-left:3px solid #6ee7ff; transform: translateX(4px); }
+.lyrics .line .ipa { display:block; font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, 'Roboto Mono', monospace; color:#bfefff; margin-top:4px; opacity:0.95 }
+.karaoke-highlight { font-weight:600 }
