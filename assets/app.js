@@ -118,6 +118,7 @@
         document.body.style.overflow = 'hidden';
         scrollEl = $('tp-scroll');
         scrollEl.scrollTop = 0;
+        scrollAcc = 0;
         updateProgress();
         setPlay(false);
     }
@@ -184,6 +185,7 @@
         state.playing = on;
         if (on) {
             state.lastTs = 0;
+            scrollAcc = 0;
             state.raf = requestAnimationFrame(tick);
         } else {
             cancelAnimationFrame(state.raf);
@@ -192,12 +194,31 @@
         $('btn-play-f').classList.toggle('playing', on);
     }
 
+    var BASE_SPEED = 60; // px/segundo na velocidade 1x
+    var scrollAcc = 0;   // acumulador fracionário de rolagem
+
     function tick(ts) {
         if (!state.playing) return;
         var dt = state.lastTs ? (ts - state.lastTs) : 16;
+        if (dt > 100) dt = 100; // evita salto após aba em segundo plano
         state.lastTs = ts;
-        scrollEl.scrollTop += (60 / 1000) * state.speed * dt;
+
+        // Acumula o movimento fracionário e aplica só quando somar >= 1px.
+        // Sem isto, em velocidades baixas (<0.6x) o incremento por frame
+        // (<1px) era truncado pelo navegador a 0 e a rolagem parava.
+        scrollAcc += (BASE_SPEED / 1000) * state.speed * dt;
+        if (scrollAcc >= 1) {
+            var whole = Math.floor(scrollAcc);
+            scrollAcc -= whole;
+            scrollEl.scrollTop += whole;
+        }
         updateProgress();
+
+        // Chegou ao fim: pausa automaticamente
+        if (scrollEl.scrollTop + scrollEl.clientHeight >= scrollEl.scrollHeight - 1) {
+            setPlay(false);
+            return;
+        }
         state.raf = requestAnimationFrame(tick);
     }
 
@@ -212,6 +233,7 @@
     function scrollIntoIndex(i) {
         if (!wrapEls.length) return;
         var target = wrapEls[i].offsetTop - scrollEl.clientHeight * FOCUS;
+        scrollAcc = 0;
         scrollEl.scrollTo({ top: Math.max(0, target), behavior: 'smooth' });
         setTimeout(updateProgress, 250);
     }
@@ -229,6 +251,7 @@
         $('btn-back').addEventListener('click', closePlayer);
         $('btn-close').addEventListener('click', closePlayer);
         $('btn-top').addEventListener('click', function () {
+            scrollAcc = 0;
             scrollEl.scrollTo({ top: 0, behavior: 'smooth' });
             setTimeout(updateProgress, 250);
         });
