@@ -62,6 +62,8 @@
         });
         if (person.title) $('hero-title').textContent = person.title;
         if (person.name) $('foot-name').textContent = person.name;
+        var fy = $('foot-year');
+        if (fy) fy.textContent = String(new Date().getFullYear());
         if (person.avatar) $('hero-avatar').src = person.avatar;
     }
 
