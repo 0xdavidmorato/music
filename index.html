@@ -14,14 +14,20 @@
     <!-- ===== HERO / APRESENTAÇÃO ===== -->
     <header class="hero" id="inicio">
         <div class="hero-bg" aria-hidden="true"></div>
+        <div class="aurora" aria-hidden="true"><span></span><span></span><span></span></div>
+
         <div class="hero-inner">
-            <figure class="hero-avatar">
-                <img src="david.jpg" alt="David" id="hero-avatar">
-            </figure>
-            <div class="hero-text">
-                <p class="hero-eyebrow" id="hero-title">Music Student</p>
-                <h1 class="hero-name"><span class="mono">{"</span>Repertório<span class="mono">"}</span></h1>
+            <div class="hero-copy">
+                <p class="hero-chip"><span class="pulse"></span><span id="hero-title">Music Student</span></p>
+                <h1 class="hero-name">Aprende a <span class="grad-text">cantar</span> em inglês, frase&nbsp;por&nbsp;frase.</h1>
                 <p class="hero-about" id="hero-about"></p>
+
+                <ul class="hero-stats" aria-label="Estatísticas do repertório">
+                    <li><strong class="grad-text" id="stat-songs">0</strong><small>músicas</small></li>
+                    <li><strong class="grad-text" id="stat-lines">0</strong><small>frases com transcrição</small></li>
+                    <li><strong class="grad-text">IPA</strong><small>fonética adaptada</small></li>
+                </ul>
+
                 <div class="hero-actions">
                     <a class="btn btn-primary" href="#repertorio">
                         <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 3v10.55A4 4 0 1 0 14 17V7h4V3h-6Z"/></svg>
@@ -33,7 +39,18 @@
                     </button>
                 </div>
             </div>
+
+            <div class="hero-stage" aria-hidden="true">
+                <div class="vinyl"><span class="vinyl-label"></span></div>
+                <figure class="cover c1"><img src="imagens/viva_la_vida.jpg" alt=""></figure>
+                <figure class="cover c2"><img src="imagens/shallow.jpg" alt=""></figure>
+                <figure class="cover c3"><img src="imagens/wonderwall.jpg" alt=""></figure>
+            </div>
         </div>
+
+        <nav class="marquee" aria-label="Atalho para músicas">
+            <div class="marquee-track" id="marquee-track"></div>
+        </nav>
     </header>
 
     <!-- ===== GALERIA DE MÚSICAS ===== -->
@@ -70,7 +87,45 @@
     </main>
 
     <footer class="footer">
-        <p>Feito para estudar inglês e música · <span id="foot-name"></span></p>
+        <div class="eq" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+
+        <div class="footer-grid">
+            <div class="f-brand">
+                <div class="f-avatar"><img src="david.jpg" alt="David"></div>
+                <h3><span id="foot-name">David</span> <span class="mono">/music student/</span></h3>
+                <p class="f-tag">Estúdio pessoal de canto e pronúncia. Letras com transcrição fonética frase a frase — é só ligar o teleprompter e acompanhar.</p>
+                <div class="f-social">
+                    <a href="mailto:0xdavidmorato@gmail.com" title="Email" aria-label="Email">
+                        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="3"/><path d="m3 6 9 7 9-7"/></svg>
+                    </a>
+                    <a href="https://github.com/0xdavidmorato/music" target="_blank" rel="noopener" title="GitHub" aria-label="GitHub do projeto">
+                        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.89 1.52 2.34 1.08 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02a9.56 9.56 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85V21c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></svg>
+                    </a>
+                </div>
+            </div>
+
+            <nav class="f-nav" aria-label="Navegação do rodapé">
+                <h4>Navegar</h4>
+                <a href="#repertorio">Repertório</a>
+                <a href="#como-funciona">Como funciona</a>
+                <a href="#adicionar">Adicionar música</a>
+                <a href="#inicio">Voltar ao topo</a>
+            </nav>
+
+            <div class="f-keys">
+                <h4>Atalhos no teleprompter</h4>
+                <ul>
+                    <li><kbd>Espaço</kbd> rolar / pausar</li>
+                    <li><kbd>↑</kbd> <kbd>↓</kbd> velocidade da rolagem</li>
+                    <li><kbd>Esc</kbd> fechar a música</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bar">
+            <p>© <span id="foot-year"></span> · Feito para estudar inglês e música · <span id="foot-name">David</span></p>
+            <p class="mono">♪ canta comigo, frase por frase</p>
+        </div>
     </footer>
 
     <!-- ===== ITEM DE MÚSICA (template) ===== -->

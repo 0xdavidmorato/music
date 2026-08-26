@@ -52,6 +52,11 @@
     }
 
     /* ============ HERO + GALERIA ============ */
+    function esc(s) {
+        return String(s == null ? '' : s)
+            .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+    }
+
     function renderHero() {
         var box = $('hero-about');
         box.innerHTML = '';
@@ -60,9 +65,38 @@
             pe.textContent = p;
             box.appendChild(pe);
         });
-        if (person.title) $('hero-title').textContent = person.title;
-        if (person.name) $('foot-name').textContent = person.name;
-        if (person.avatar) $('hero-avatar').src = person.avatar;
+        var t = $('hero-title');
+        if (t && person.title) t.textContent = person.title;
+        var fn = $('foot-name');
+        if (fn && person.name) fn.textContent = person.name;
+        var fy = $('foot-year');
+        if (fy) fy.textContent = new Date().getFullYear();
+    }
+
+    function renderStats() {
+        var lines = 0;
+        allSongs.forEach(function (s) { lines += (s.lyrics || []).length; });
+        var sc = $('stat-songs'), sl = $('stat-lines'), cnt = $('song-count');
+        if (sc) sc.textContent = allSongs.length;
+        if (sl) sl.textContent = lines;
+        if (cnt) cnt.textContent = allSongs.length + ' músicas';
+    }
+
+    // letreiro rolante com todas as músicas (clicável)
+    function buildMarquee() {
+        var track = $('marquee-track');
+        if (!track) return;
+        track.innerHTML = '';
+        for (var r = 0; r < 2; r++) {           // duplicado p/ loop contínuo
+            allSongs.forEach(function (song) {
+                var b = newEl('button', 'mq-item');
+                b.type = 'button';
+                b.innerHTML = '<i>&#9835;</i> ' + esc(song.title) +
+                    ' <em>' + esc(song.artist || '') + '</em>';
+                b.addEventListener('click', function () { openPlayer(song); });
+                track.appendChild(b);
+            });
+        }
     }
 
     function renderGrid() {
@@ -364,6 +398,8 @@
     /* ============ ARRANQUE ============ */
     function init() {
         renderHero();
+        renderStats();
+        buildMarquee();
         renderGrid();
         wirePlayer();
 
